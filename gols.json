@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "24/06/2026 18:44",
-  "total_linhas": 148,
+  "ultima_atualizacao_brasilia": "24/06/2026 20:21",
+  "total_linhas": 154,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -889,6 +889,42 @@
       "pais": "Canadá",
       "data_jogo": "24/06/2026",
       "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Yassine Bounou",
+      "pais": "Haiti",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Achraf Hakimi",
+      "pais": "Marrocos",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Wilson Isidor",
+      "pais": "Haiti",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Ismael Saibari",
+      "pais": "Marrocos",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Vinícius Júnior",
+      "pais": "Brasil",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Vinícius Júnior",
+      "pais": "Brasil",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
     }
   ]
 }
