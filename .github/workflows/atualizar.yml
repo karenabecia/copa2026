@@ -1,0 +1,36 @@
+name: ⚽ Atualizar Gols Copa 2026
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  atualizar-gols:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: 🐍 Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ⚽ Gerar index.html com gols atualizados
+        run: python update_goals.py
+
+      - name: 📤 Commitar e publicar no GitHub
+        run: |
+          git config user.name  "GitHub Actions [Bot]"
+          git config user.email "actions@github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "Sem mudanças nos gols — nenhum commit necessário."
+          else
+            git commit -m "⚽ Atualizar gols — $(date -u '+%d/%m/%Y %H:%M') UTC"
+            git push
+          fi
