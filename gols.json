@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "24/06/2026 15:22",
-  "total_linhas": 141,
+  "ultima_atualizacao_brasilia": "24/06/2026 17:05",
+  "total_linhas": 145,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -847,6 +847,30 @@
       "pais": "Colômbia",
       "data_jogo": "23/06/2026",
       "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Kerim Alajbegovic",
+      "pais": "Bósnia-Herzegovina",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Sultan Al-Brake",
+      "pais": "Bósnia-Herzegovina",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Hassan Al-Haydos",
+      "pais": "Catar",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Rubén Vargas",
+      "pais": "Suíça",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
     }
   ]
 }
