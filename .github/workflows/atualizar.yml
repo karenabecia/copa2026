@@ -1,15 +1,18 @@
 name: ⚽ Atualizar Gols Copa 2026
 
 on:
+  # Roda automaticamente a cada 12 horas
   schedule:
     - cron: '0 */12 * * *'
+
+  # Permite disparar manualmente pela aba "Actions" no GitHub
   workflow_dispatch:
 
 jobs:
   atualizar-gols:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # necessário para fazer commit
 
     steps:
       - name: 📥 Baixar repositório
@@ -28,6 +31,7 @@ jobs:
           git config user.name  "GitHub Actions [Bot]"
           git config user.email "actions@github.com"
           git add index.html
+          # só faz commit se o arquivo realmente mudou
           if git diff --cached --quiet; then
             echo "Sem mudanças nos gols — nenhum commit necessário."
           else
