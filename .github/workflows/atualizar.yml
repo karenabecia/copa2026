@@ -1,18 +1,17 @@
 name: ⚽ Atualizar Gols Copa 2026
 
 on:
-  # Roda automaticamente a cada 12 horas
   schedule:
-    - cron: '0 */12 * * *'
-
-  # Permite disparar manualmente pela aba "Actions" no GitHub
+    # Roda 1 vez por hora. O horário do cron é UTC.
+    # O minuto 17 evita o pico do início da hora no GitHub Actions.
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 jobs:
   atualizar-gols:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # necessário para fazer commit
+      contents: write
 
     steps:
       - name: 📥 Baixar repositório
@@ -23,18 +22,17 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: ⚽ Gerar index.html com gols atualizados
+      - name: ⚽ Gerar base limpa de gols
         run: python update_goals.py
 
       - name: 📤 Commitar e publicar no GitHub
         run: |
           git config user.name  "GitHub Actions [Bot]"
           git config user.email "actions@github.com"
-          git add index.html
-          # só faz commit se o arquivo realmente mudou
+          git add index.html gols.csv gols.json
           if git diff --cached --quiet; then
-            echo "Sem mudanças nos gols — nenhum commit necessário."
+            echo "Sem mudanças nos dados — nenhum commit necessário."
           else
-            git commit -m "⚽ Atualizar gols — $(date -u '+%d/%m/%Y %H:%M') UTC"
+            git commit -m "⚽ Atualizar base de gols — $(date -u '+%d/%m/%Y %H:%M') UTC"
             git push
           fi
