@@ -69,14 +69,16 @@ def traduzir_partida(short_name):
 
 def calcular_fase(data_utc):
     dt = datetime.datetime.fromisoformat(data_utc.replace('Z', '+00:00'))
+    # Copa 2026: 48 equipes → Fase de Grupos + Fase de 32 + Oitavas + Quartas + Semi + 3º + Final
     thresholds = [
         (datetime.datetime(2026, 6, 18, 3, 0, tzinfo=datetime.timezone.utc), 'Rodada 1'),
         (datetime.datetime(2026, 6, 23, 3, 0, tzinfo=datetime.timezone.utc), 'Rodada 2'),
         (datetime.datetime(2026, 6, 28, 3, 0, tzinfo=datetime.timezone.utc), 'Rodada 3'),
-        (datetime.datetime(2026, 7, 5,  3, 0, tzinfo=datetime.timezone.utc), 'Oitavas'),
-        (datetime.datetime(2026, 7, 9,  3, 0, tzinfo=datetime.timezone.utc), 'Quartas'),
-        (datetime.datetime(2026, 7, 13, 3, 0, tzinfo=datetime.timezone.utc), 'Semifinal'),
-        (datetime.datetime(2026, 7, 15, 3, 0, tzinfo=datetime.timezone.utc), 'Terceiro Lugar'),
+        (datetime.datetime(2026, 7, 4,  3, 0, tzinfo=datetime.timezone.utc), 'Fase de 32'),
+        (datetime.datetime(2026, 7, 9,  3, 0, tzinfo=datetime.timezone.utc), 'Oitavas'),
+        (datetime.datetime(2026, 7, 14, 3, 0, tzinfo=datetime.timezone.utc), 'Quartas'),
+        (datetime.datetime(2026, 7, 18, 3, 0, tzinfo=datetime.timezone.utc), 'Semifinal'),
+        (datetime.datetime(2026, 7, 19, 3, 0, tzinfo=datetime.timezone.utc), 'Terceiro Lugar'),
     ]
     for cutoff, label in thresholds:
         if dt < cutoff:
@@ -96,6 +98,7 @@ def traduzir_tipo(text):
 def get_all_goals():
     goals = []
     seen_events = set()
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
 
     for date_str in DATAS:
         try:
@@ -112,16 +115,22 @@ def get_all_goals():
 
                 comp = event['competitions'][0]
                 state = comp['status']['type']['state']
-                if state not in ('in', 'post'):
+                data_utc = event['date']
+
+                # Verifica se o jogo já deveria ter terminado
+                # (state='post'/'in' OU horário previsto de início +115min já passou)
+                dt_inicio = datetime.datetime.fromisoformat(data_utc.replace('Z', '+00:00'))
+                dt_fim_estimado = dt_inicio + datetime.timedelta(minutes=115)
+                jogo_encerrado = state in ('in', 'post') or now_utc > dt_fim_estimado
+
+                if not jogo_encerrado:
                     continue  # jogo ainda não ocorreu
 
                 partida = traduzir_partida(event.get('shortName', ''))
-                data_utc = event['date']
                 fase = calcular_fase(data_utc)
 
                 # Converte para horário de Brasília (UTC-3)
-                dt = datetime.datetime.fromisoformat(data_utc.replace('Z', '+00:00'))
-                dt_br = dt - datetime.timedelta(hours=3)
+                dt_br = dt_inicio - datetime.timedelta(hours=3)
                 data_br = dt_br.strftime('%d/%m/%Y')
 
                 # Mapa de times para lookup por ID
@@ -130,41 +139,53 @@ def get_all_goals():
                     for c in comp.get('competitors', [])
                 }
 
-                # Busca gols no endpoint de summary
-                try:
-                    time.sleep(0.5)  # respeita rate limit da ESPN
-                    summary = fetch_json(f"{BASE_URL}/summary?event={eid}")
+                # Tenta usar os details já incluídos no scoreboard (evita chamada extra)
+                plays_inline = [d for d in comp.get('details', []) if d.get('scoringPlay', False)]
 
-                    for play in summary.get('scoringPlays', []):
-                        tipo_text = play.get('type', {}).get('text', 'Goal')
-                        tipo_lower = tipo_text.lower()
+                if plays_inline:
+                    fonte = plays_inline
+                else:
+                    # Fallback: busca no endpoint summary (para jogos com status desatualizado)
+                    try:
+                        time.sleep(0.4)
+                        summary = fetch_json(f"{BASE_URL}/summary?event={eid}")
+                        fonte = [
+                            p for p in summary.get('scoringPlays', [])
+                            if 'goal' in p.get('type', {}).get('text', '').lower()
+                            or 'penalty' in p.get('type', {}).get('text', '').lower()
+                        ]
+                    except Exception as e:
+                        print(f"    ⚠ summary {eid} ({partida}): {e}")
+                        continue
 
-                        if 'goal' not in tipo_lower and 'penalty' not in tipo_lower:
-                            continue
+                for play in fonte:
+                    team_id = play.get('team', {}).get('id', '')
+                    team = team_map.get(team_id, {})
+                    team_abbr = team.get('abbreviation', '')
+                    pais = PAISES.get(team_abbr) or team.get('displayName', team_abbr or '?')
 
-                        team_id = play.get('team', {}).get('id', '')
-                        team = team_map.get(team_id, {})
-                        team_abbr = team.get('abbreviation', '')
-                        pais = PAISES.get(team_abbr) or team.get('displayName', '?')
+                    athletes = play.get('athletesInvolved', [])
+                    jogador = athletes[0].get('displayName', '?') if athletes else '?'
+                    minuto = play.get('clock', {}).get('displayValue', '?')
 
-                        athletes = play.get('athletesInvolved', [])
-                        jogador = athletes[0].get('displayName', '?') if athletes else '?'
-                        minuto = play.get('clock', {}).get('displayValue', '?')
-                        tipo = traduzir_tipo(tipo_text)
+                    # Usa flags booleanos quando disponíveis (mais confiável que texto)
+                    if play.get('ownGoal', False):
+                        tipo = 'Gol Contra'
+                    elif play.get('penaltyKick', False):
+                        tipo = 'Pênalti'
+                    else:
+                        tipo = traduzir_tipo(play.get('type', {}).get('text', 'Goal'))
 
-                        goals.append({
-                            'partida': partida,
-                            'data': data_br,
-                            'pais': pais,
-                            'jogador': jogador,
-                            'minuto': minuto,
-                            'fase': fase,
-                            'tipo': tipo,
-                            'sort_key': (data_utc, minuto),
-                        })
-
-                except Exception as e:
-                    print(f"    ⚠ summary {eid} ({partida}): {e}")
+                    goals.append({
+                        'partida': partida,
+                        'data': data_br,
+                        'pais': pais,
+                        'jogador': jogador,
+                        'minuto': minuto,
+                        'fase': fase,
+                        'tipo': tipo,
+                        'sort_key': (data_utc, minuto),
+                    })
 
         except Exception as e:
             print(f"  ⚠ scoreboard {date_str}: {e}")
@@ -177,10 +198,11 @@ FASE_CORES = {
     'Rodada 1':      ('#e8f5e9', '#1b5e20'),
     'Rodada 2':      ('#e3f2fd', '#0d47a1'),
     'Rodada 3':      ('#fff8e1', '#f57f17'),
-    'Oitavas':       ('#fce4ec', '#880e4f'),
-    'Quartas':       ('#f3e5f5', '#4a148c'),
-    'Semifinal':     ('#ffe0b2', '#bf360c'),
-    'Terceiro Lugar':('#efebe9', '#3e2723'),
+    'Fase de 32':    ('#fce4ec', '#880e4f'),
+    'Oitavas':       ('#f3e5f5', '#4a148c'),
+    'Quartas':       ('#ffe0b2', '#bf360c'),
+    'Semifinal':     ('#efebe9', '#3e2723'),
+    'Terceiro Lugar':('#e8eaf6', '#1a237e'),
     'Final':         ('#ffecb3', '#ff6f00'),
 }
 
@@ -408,6 +430,7 @@ def gerar_html(goals):
       <option>Rodada 1</option>
       <option>Rodada 2</option>
       <option>Rodada 3</option>
+      <option>Fase de 32</option>
       <option>Oitavas</option>
       <option>Quartas</option>
       <option>Semifinal</option>
