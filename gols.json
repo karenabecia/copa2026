@@ -1,5 +1,852 @@
 {
-  "ultima_atualizacao_brasilia": "Aguardando primeira execução do GitHub Actions",
-  "total_linhas": 0,
-  "dados": []
+  "ultima_atualizacao_brasilia": "24/06/2026 14:58",
+  "total_linhas": 141,
+  "dados": [
+    {
+      "nome_jogador": "Julián Quiñones",
+      "pais": "México",
+      "data_jogo": "11/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Raúl Jiménez",
+      "pais": "México",
+      "data_jogo": "11/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ladislav Krejcí",
+      "pais": "Tchequia",
+      "data_jogo": "11/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Hwang In-Beom",
+      "pais": "Coreia do Sul",
+      "data_jogo": "11/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Oh Hyeon-Gyu",
+      "pais": "Coreia do Sul",
+      "data_jogo": "11/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Jovo Lukic",
+      "pais": "Bósnia-Herzegovina",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Cyle Larin",
+      "pais": "Canadá",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Damián Bobadilla",
+      "pais": "Paraguai",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Folarin Balogun",
+      "pais": "EUA",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Folarin Balogun",
+      "pais": "EUA",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Maurício",
+      "pais": "Paraguai",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Giovanni Reyna",
+      "pais": "EUA",
+      "data_jogo": "12/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Breel Embolo",
+      "pais": "Suíça",
+      "data_jogo": "13/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Miro Muheim",
+      "pais": "Suíça",
+      "data_jogo": "13/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ismael Saibari",
+      "pais": "Marrocos",
+      "data_jogo": "13/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Vinícius Júnior",
+      "pais": "Brasil",
+      "data_jogo": "13/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "John McGinn",
+      "pais": "Escócia",
+      "data_jogo": "13/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Nestory Irankunda",
+      "pais": "Austrália",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Connor Metcalfe",
+      "pais": "Austrália",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Felix Nmecha",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Livano Comenencia",
+      "pais": "Curaçao",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Nico Schlotterbeck",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Kai Havertz",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Jamal Musiala",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Nathaniel Brown",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Deniz Undav",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Kai Havertz",
+      "pais": "Alemanha",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Virgil van Dijk",
+      "pais": "Países Baixos",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Keito Nakamura",
+      "pais": "Japão",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Crysencio Summerville",
+      "pais": "Países Baixos",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Daichi Kamada",
+      "pais": "Japão",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Amad Diallo",
+      "pais": "Costa do Marfim",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Yasin Ayari",
+      "pais": "Suécia",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Alexander Isak",
+      "pais": "Suécia",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Omar Rekik",
+      "pais": "Tunísia",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Viktor Gyökeres",
+      "pais": "Suécia",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Mattias Svanberg",
+      "pais": "Suécia",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Yasin Ayari",
+      "pais": "Suécia",
+      "data_jogo": "14/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Emam Ashour",
+      "pais": "Egito",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Mohamed Hany",
+      "pais": "Egito",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Abdulelah Al-Amri",
+      "pais": "Arábia Saudita",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Maxi Araújo",
+      "pais": "Uruguai",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Elijah Just",
+      "pais": "Nova Zelândia",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Ramin Rezaeian",
+      "pais": "Irã",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Elijah Just",
+      "pais": "Nova Zelândia",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Mohammad Mohebbi",
+      "pais": "Irã",
+      "data_jogo": "15/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Bradley Barcola",
+      "pais": "França",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ibrahim Mbaye",
+      "pais": "Senegal",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Aymen Hussein",
+      "pais": "Iraque",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Leo Østigard",
+      "pais": "Noruega",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Aymen Hussein",
+      "pais": "Iraque",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "16/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Romano Schmid",
+      "pais": "Áustria",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Ali Olwan",
+      "pais": "Jordânia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Yazan Al-Arab",
+      "pais": "Jordânia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Marko Arnautovic",
+      "pais": "Áustria",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "João Neves",
+      "pais": "Portugal",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Yoane Wissa",
+      "pais": "RD Congo",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Harry Kane",
+      "pais": "Inglaterra",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Martin Baturina",
+      "pais": "Croácia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Harry Kane",
+      "pais": "Inglaterra",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Petar Musa",
+      "pais": "Croácia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Jude Bellingham",
+      "pais": "Inglaterra",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Marcus Rashford",
+      "pais": "Inglaterra",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Caleb Yirenkyi",
+      "pais": "Gana",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Daniel Muñoz",
+      "pais": "Colômbia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Abbosbek Fayzullaev",
+      "pais": "Uzbequistão",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Luis Díaz",
+      "pais": "Colômbia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Jáminton Campaz",
+      "pais": "Colômbia",
+      "data_jogo": "17/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Michal Sadílek",
+      "pais": "Tchequia",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Teboho Mokoena",
+      "pais": "África do Sul",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Johan Manzambi",
+      "pais": "Suíça",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Rubén Vargas",
+      "pais": "Suíça",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Johan Manzambi",
+      "pais": "Suíça",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ermin Mahmic",
+      "pais": "Bósnia-Herzegovina",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Granit Xhaka",
+      "pais": "Suíça",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Cyle Larin",
+      "pais": "Canadá",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Jonathan David",
+      "pais": "Canadá",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Jonathan David",
+      "pais": "Canadá",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Nathan Saliba",
+      "pais": "Canadá",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Mohamed Manai",
+      "pais": "Catar",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Jonathan David",
+      "pais": "Canadá",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Luis Romo",
+      "pais": "México",
+      "data_jogo": "18/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Cameron Burgess",
+      "pais": "Austrália",
+      "data_jogo": "19/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Alex Freeman",
+      "pais": "EUA",
+      "data_jogo": "19/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ismael Saibari",
+      "pais": "Marrocos",
+      "data_jogo": "19/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Matheus Cunha",
+      "pais": "Brasil",
+      "data_jogo": "19/06/2026",
+      "hora_jogo": "21:30"
+    },
+    {
+      "nome_jogador": "Matheus Cunha",
+      "pais": "Brasil",
+      "data_jogo": "19/06/2026",
+      "hora_jogo": "21:30"
+    },
+    {
+      "nome_jogador": "Vinícius Júnior",
+      "pais": "Brasil",
+      "data_jogo": "19/06/2026",
+      "hora_jogo": "21:30"
+    },
+    {
+      "nome_jogador": "Matías Galarza",
+      "pais": "Paraguai",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Brian Brobbey",
+      "pais": "Países Baixos",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Brian Brobbey",
+      "pais": "Países Baixos",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Cody Gakpo",
+      "pais": "Países Baixos",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Cody Gakpo",
+      "pais": "Países Baixos",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Anthony Elanga",
+      "pais": "Suécia",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Crysencio Summerville",
+      "pais": "Países Baixos",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Franck Kessié",
+      "pais": "Costa do Marfim",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Deniz Undav",
+      "pais": "Alemanha",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Deniz Undav",
+      "pais": "Alemanha",
+      "data_jogo": "20/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Daichi Kamada",
+      "pais": "Japão",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Ayase Ueda",
+      "pais": "Japão",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Junya Ito",
+      "pais": "Japão",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Ayase Ueda",
+      "pais": "Japão",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "01:00"
+    },
+    {
+      "nome_jogador": "Lamine Yamal",
+      "pais": "Espanha",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Mikel Oyarzabal",
+      "pais": "Espanha",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Mikel Oyarzabal",
+      "pais": "Espanha",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Hassan Al-Tambakti",
+      "pais": "Arábia Saudita",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Kevin Pina",
+      "pais": "Cabo Verde",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Maxi Araújo",
+      "pais": "Uruguai",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Agustín Canobbio",
+      "pais": "Uruguai",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Hélio Varela",
+      "pais": "Cabo Verde",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Finn Surman",
+      "pais": "Nova Zelândia",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Mostafa Zico",
+      "pais": "Egito",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Mohamed Salah",
+      "pais": "Egito",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Trézéguet",
+      "pais": "Egito",
+      "data_jogo": "21/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Ousmane Dembélé",
+      "pais": "França",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Marcus Holmgren Pedersen",
+      "pais": "Noruega",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Ismaïla Sarr",
+      "pais": "Senegal",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Ismaïla Sarr",
+      "pais": "Senegal",
+      "data_jogo": "22/06/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Nizar Al-Rashdan",
+      "pais": "Jordânia",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Nadhir Benbouali",
+      "pais": "Argélia",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Amine Gouiri",
+      "pais": "Argélia",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Cristiano Ronaldo",
+      "pais": "Portugal",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Nuno Mendes",
+      "pais": "Portugal",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Cristiano Ronaldo",
+      "pais": "Portugal",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Abduvohid Nematov",
+      "pais": "Uzbequistão",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Rafael Leão",
+      "pais": "Portugal",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Ante Budimir",
+      "pais": "Croácia",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Daniel Muñoz",
+      "pais": "Colômbia",
+      "data_jogo": "23/06/2026",
+      "hora_jogo": "23:00"
+    }
+  ]
 }
