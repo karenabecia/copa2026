@@ -7,6 +7,10 @@ Gera uma fonte simples para Excel, Power Query e Power BI:
 
 Cada linha do CSV representa 1 gol identificado na fonte de dados.
 Campos finais: nome_jogador, pais, data_jogo, hora_jogo
+
+A coluna pais indica a seleção favorecida pelo gol. Em caso de gol contra,
+o jogador continua sendo o autor do gol contra, mas o pais será a seleção
+que recebeu o gol no placar.
 """
 from __future__ import annotations
 
@@ -275,26 +279,42 @@ def collect_scoring_plays(event_id: str, competition: dict[str, Any]) -> list[di
     return unique
 
 
-def represented_country(
+def country_favored_by_goal(
     play: dict[str, Any],
     athlete: dict[str, Any] | None,
     team_by_id: dict[str, dict[str, Any]],
     team_ids: list[str],
 ) -> str:
+    """Retorna a seleção favorecida pelo gol.
+
+    Regra de negócio da base:
+    - Gol normal: país que marcou o gol.
+    - Gol contra: país que ganhou o gol no placar, não o país do jogador.
+
+    Na ESPN, o campo play.team normalmente representa o time que recebeu
+    o gol no placar. Isso é exatamente o que queremos para a coluna pais.
+    O fallback abaixo cobre casos em que o play.team venha ausente em um
+    gol contra: nesse cenário usamos o time adversário do atleta.
+    """
     scoring_team_id = play_team_id(play)
+
+    if scoring_team_id and scoring_team_id in team_by_id:
+        return team_display_name(team_by_id[scoring_team_id])
+
+    # Fallback para gol contra sem team no lance: se soubermos o time do
+    # jogador, o país favorecido é o adversário.
     player_team_id = athlete_team_id(athlete)
-
-    if player_team_id and player_team_id in team_by_id:
-        return team_display_name(team_by_id[player_team_id])
-
-    # Em gol contra, quando a ESPN informa apenas o time beneficiado pelo gol,
-    # o jogador representa o adversário.
-    if is_own_goal(play) and scoring_team_id and len(team_ids) == 2:
-        opposite_ids = [team_id for team_id in team_ids if team_id != scoring_team_id]
+    if is_own_goal(play) and player_team_id and len(team_ids) == 2:
+        opposite_ids = [team_id for team_id in team_ids if team_id != player_team_id]
         if opposite_ids:
             return team_display_name(team_by_id.get(opposite_ids[0]))
 
-    return team_display_name(team_by_id.get(scoring_team_id))
+    # Último fallback: se não houver identificação clara do país favorecido,
+    # ainda tentamos usar o país do atleta para não perder a linha.
+    if player_team_id and player_team_id in team_by_id:
+        return team_display_name(team_by_id[player_team_id])
+
+    return "Não informado"
 
 
 def get_all_goals() -> tuple[list[dict[str, str]], int, int]:
@@ -356,7 +376,7 @@ def get_all_goals() -> tuple[list[dict[str, str]], int, int]:
                 rows.append(
                     {
                         "nome_jogador": player_name,
-                        "pais": represented_country(play, athlete, team_by_id, team_ids),
+                        "pais": country_favored_by_goal(play, athlete, team_by_id, team_ids),
                         "data_jogo": data_jogo,
                         "hora_jogo": hora_jogo,
                         "_sort": f"{kickoff_utc.isoformat()}|{len(rows):06d}",
@@ -421,7 +441,7 @@ def write_html(rows: list[dict[str, str]], updated_at_br: str) -> None:
   <h1>Gols da Copa do Mundo 2026</h1>
   <p>Última atualização: <strong>{html.escape(updated_at_br)} - Horário de Brasília</strong></p>
   <p>Fonte limpa para Power Query / Power BI: <code>gols.csv</code></p>
-  <p>Cada linha representa um gol. A tabela contém apenas: jogador, país, data e hora do jogo.</p>
+  <p>Cada linha representa um gol. A coluna pais mostra a seleção favorecida pelo gol. Em gol contra, o jogador é o autor do gol contra, mas o país é quem recebeu o gol no placar.</p>
 
   <table>
     <thead>
