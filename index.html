@@ -6,72 +6,172 @@
   <title>⚽ Copa do Mundo 2026 — Gols</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
-    header { background: linear-gradient(135deg, #1a3c5e 0%, #0f2e1a 100%); padding: 24px 32px; border-bottom: 3px solid #238636; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #1a3c5e 0%, #0f2e1a 100%);
+      padding: 24px 32px;
+      border-bottom: 3px solid #238636;
+    }
     header h1 { font-size: 1.8rem; font-weight: 700; }
     header h1 span { color: #3fb950; }
-    .meta { margin-top: 6px; font-size: 0.85rem; color: #8b949e; }
+    .meta {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
     .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
-    .stats-row { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
-    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 24px; flex: 1; min-width: 140px; text-align: center; }
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .stat-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px 24px;
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+    }
     .stat-card .num { font-size: 2rem; font-weight: 700; color: #3fb950; }
     .stat-card .label { font-size: 0.8rem; color: #8b949e; margin-top: 4px; }
-    .top-scorers { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+    .top-scorers {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
     .top-scorers h3 { font-size: 0.9rem; color: #8b949e; margin-bottom: 12px; }
-    .top-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #21262d; }
+    .top-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid #21262d;
+    }
     .top-item:last-child { border-bottom: none; }
     .top-rank { font-weight: 700; color: #f0c93a; width: 28px; }
     .top-pais { flex: 1; font-size: 0.9rem; }
     .top-gols { font-size: 0.85rem; color: #3fb950; font-weight: 600; }
-    .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid #30363d; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-    thead th { background: #161b22; color: #8b949e; font-weight: 600; padding: 10px 14px; text-align: left; white-space: nowrap; border-bottom: 2px solid #30363d; }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    thead th {
+      background: #161b22;
+      color: #8b949e;
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      white-space: nowrap;
+      border-bottom: 2px solid #30363d;
+    }
     tbody tr { background: #0d1117; transition: background 0.15s; }
     tbody tr:hover { background: #161b22; }
     tbody tr:nth-child(even) { background: #111820; }
     tbody tr:nth-child(even):hover { background: #1a2332; }
-    td { padding: 9px 14px; border-bottom: 1px solid #21262d; vertical-align: middle; }
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #21262d;
+      vertical-align: middle;
+    }
     .td-partida { font-weight: 500; min-width: 180px; }
     .td-data { white-space: nowrap; color: #8b949e; }
     .td-pais { white-space: nowrap; }
     .td-jogador { min-width: 160px; }
     .td-min { text-align: center; color: #8b949e; font-variant-numeric: tabular-nums; }
-    .fase-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
-    .tipo-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
-    .filter-bar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
-    .filter-bar input, .filter-bar select { background: #161b22; border: 1px solid #30363d; color: #e6edf3; border-radius: 6px; padding: 8px 12px; font-size: 0.88rem; outline: none; }
-    .filter-bar input:focus, .filter-bar select:focus { border-color: #3fb950; }
+    .fase-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .tipo-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .filter-bar input, .filter-bar select {
+      background: #161b22;
+      border: 1px solid #30363d;
+      color: #e6edf3;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      outline: none;
+    }
+    .filter-bar input:focus, .filter-bar select:focus {
+      border-color: #3fb950;
+    }
     .filter-bar input { flex: 1; min-width: 200px; }
-    .aviso { background: #2d2000; border: 1px solid #f0c93a33; color: #f0c93a; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; font-size: 0.85rem; }
-    footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.8rem; border-top: 1px solid #21262d; margin-top: 32px; }
-    @media (max-width: 600px) { .td-partida, .td-jogador { min-width: 120px; } header h1 { font-size: 1.3rem; } }
+    .empty { text-align: center; padding: 48px; color: #8b949e; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #484f58;
+      font-size: 0.8rem;
+      border-top: 1px solid #21262d;
+      margin-top: 32px;
+    }
+    @media (max-width: 600px) {
+      .td-partida, .td-jogador { min-width: 120px; }
+      header h1 { font-size: 1.3rem; }
+    }
   </style>
 </head>
 <body>
+
 <header>
   <h1>⚽ Copa do Mundo 2026 — <span>Todos os Gols</span></h1>
-  <p class="meta">Atualizado automaticamente a cada 12h · Última atualização: <strong>23/06/2026 23:01 (Brasília)</strong></p>
+  <p class="meta">Atualizado automaticamente · Última atualização: <strong id="ts">24/06/2026 14:24 (Brasília)</strong></p>
 </header>
+
 <div class="container">
+
   <div class="stats-row">
     <div class="stat-card">
-      <div class="num">125</div>
+      <div class="num" id="total-gols">141</div>
       <div class="label">Gols no Torneio</div>
     </div>
     <div class="stat-card">
-      <div class="num">101</div>
+      <div class="num">106</div>
       <div class="label">Marcadores</div>
     </div>
     <div class="stat-card">
-      <div class="num">40</div>
+      <div class="num">44</div>
       <div class="label">Jogos com Gols</div>
     </div>
     <div class="top-scorers" style="flex:2;min-width:220px">
       <h3>🏆 Top 5 seleções artilheiras</h3>
-      <div class="top-item"><span class="top-rank">#1</span><span class="top-pais">Alemanha</span><span class="top-gols">10 ⚽</span></div><div class="top-item"><span class="top-rank">#2</span><span class="top-pais">Noruega</span><span class="top-gols">7 ⚽</span></div><div class="top-item"><span class="top-rank">#3</span><span class="top-pais">EUA</span><span class="top-gols">6 ⚽</span></div><div class="top-item"><span class="top-rank">#4</span><span class="top-pais">Argentina</span><span class="top-gols">6 ⚽</span></div><div class="top-item"><span class="top-rank">#5</span><span class="top-pais">Suíça</span><span class="top-gols">5 ⚽</span></div>
+      <div class="top-item"><span class="top-rank">#1</span><span class="top-pais">Alemanha</span><span class="top-gols">9 ⚽</span></div><div class="top-item"><span class="top-rank">#2</span><span class="top-pais">P. Baixos</span><span class="top-gols">7 ⚽</span></div><div class="top-item"><span class="top-rank">#3</span><span class="top-pais">Canadá</span><span class="top-gols">6 ⚽</span></div><div class="top-item"><span class="top-rank">#4</span><span class="top-pais">Japão</span><span class="top-gols">6 ⚽</span></div><div class="top-item"><span class="top-rank">#5</span><span class="top-pais">Suécia</span><span class="top-gols">6 ⚽</span></div>
     </div>
   </div>
-  <div class="aviso">⚠️ <strong>Versão inicial:</strong> dados até 23/06 às 22h. A partir da próxima execução do GitHub Actions, a tabela será atualizada automaticamente com dados reais da ESPN.</div>
+
   <div class="filter-bar">
     <input type="text" id="busca" placeholder="🔍  Buscar jogador, partida ou país..." oninput="filtrar()">
     <select id="fase-filtro" onchange="filtrar()">
@@ -79,6 +179,7 @@
       <option>Rodada 1</option>
       <option>Rodada 2</option>
       <option>Rodada 3</option>
+      <option>Fase de 32</option>
       <option>Oitavas</option>
       <option>Quartas</option>
       <option>Semifinal</option>
@@ -92,6 +193,7 @@
       <option>Gol Contra</option>
     </select>
   </div>
+
   <div class="table-wrap">
     <table id="tabela-gols">
       <thead>
@@ -106,1139 +208,1288 @@
         </tr>
       </thead>
       <tbody id="tbody">
-    <tr>
-      <td class="td-partida">México x África do Sul</td>
-      <td class="td-data">11/06/2026</td>
-      <td class="td-pais">México</td>
-      <td class="td-jogador"><strong>Quiñones</strong></td>
-      <td class="td-min">8'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">México x África do Sul</td>
-      <td class="td-data">11/06/2026</td>
-      <td class="td-pais">México</td>
-      <td class="td-jogador"><strong>Jiménez</strong></td>
-      <td class="td-min">45+2'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Coreia do Sul x Tchequia</td>
-      <td class="td-data">11/06/2026</td>
-      <td class="td-pais">Tchequia</td>
-      <td class="td-jogador"><strong>Krejci</strong></td>
-      <td class="td-min">31'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Coreia do Sul x Tchequia</td>
-      <td class="td-data">11/06/2026</td>
-      <td class="td-pais">Coreia do Sul</td>
-      <td class="td-jogador"><strong>Hwang In-beom</strong></td>
-      <td class="td-min">58'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Coreia do Sul x Tchequia</td>
-      <td class="td-data">11/06/2026</td>
-      <td class="td-pais">Coreia do Sul</td>
-      <td class="td-jogador"><strong>Hyeon-gyu Oh</strong></td>
-      <td class="td-min">89'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Canadá x Bósnia-Herzegovina</td>
-      <td class="td-data">12/06/2026</td>
-      <td class="td-pais">Canadá</td>
-      <td class="td-jogador"><strong>Larin</strong></td>
-      <td class="td-min">22'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Canadá x Bósnia-Herzegovina</td>
-      <td class="td-data">12/06/2026</td>
-      <td class="td-pais">Bósnia-Herzegovina</td>
-      <td class="td-jogador"><strong>Lukic</strong></td>
-      <td class="td-min">78'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Paraguai</td>
-      <td class="td-data">12/06/2026</td>
-      <td class="td-pais">EUA</td>
-      <td class="td-jogador"><strong>Balogun</strong></td>
-      <td class="td-min">34'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Paraguai</td>
-      <td class="td-data">12/06/2026</td>
-      <td class="td-pais">EUA</td>
-      <td class="td-jogador"><strong>Balogun</strong></td>
-      <td class="td-min">67'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Paraguai</td>
-      <td class="td-data">12/06/2026</td>
-      <td class="td-pais">Paraguai</td>
-      <td class="td-jogador"><strong>Maurício</strong></td>
-      <td class="td-min">71'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Paraguai</td>
-      <td class="td-data">12/06/2026</td>
-      <td class="td-pais">EUA</td>
-      <td class="td-jogador"><strong>Reyna</strong></td>
-      <td class="td-min">88'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Catar x Suíça</td>
-      <td class="td-data">13/06/2026</td>
-      <td class="td-pais">Suíça</td>
-      <td class="td-jogador"><strong>Embolo</strong></td>
-      <td class="td-min">54'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Brasil x Marrocos</td>
-      <td class="td-data">13/06/2026</td>
-      <td class="td-pais">Brasil</td>
-      <td class="td-jogador"><strong>Vinícius Jr.</strong></td>
-      <td class="td-min">12'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Brasil x Marrocos</td>
-      <td class="td-data">13/06/2026</td>
-      <td class="td-pais">Marrocos</td>
-      <td class="td-jogador"><strong>Saibari</strong></td>
-      <td class="td-min">71'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Haiti x Escócia</td>
-      <td class="td-data">13/06/2026</td>
-      <td class="td-pais">Escócia</td>
-      <td class="td-jogador"><strong>McGinn</strong></td>
-      <td class="td-min">45'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Austrália x Turquia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Austrália</td>
-      <td class="td-jogador"><strong>Metcalfe</strong></td>
-      <td class="td-min">43'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Austrália x Turquia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Austrália</td>
-      <td class="td-jogador"><strong>Irankunda</strong></td>
-      <td class="td-min">79'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Havertz</strong></td>
-      <td class="td-min">11'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Undav</strong></td>
-      <td class="td-min">23'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Nmecha</strong></td>
-      <td class="td-min">38'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Havertz</strong></td>
-      <td class="td-min">45'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Musiala</strong></td>
-      <td class="td-min">62'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Brown</strong></td>
-      <td class="td-min">75'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Curaçao</td>
-      <td class="td-jogador"><strong>Naar</strong></td>
-      <td class="td-min">80'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Alemanha x Curaçao</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Schlotterbeck</strong></td>
-      <td class="td-min">88'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Costa do Marfim x Equador</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Costa do Marfim</td>
-      <td class="td-jogador"><strong>Amad Diallo</strong></td>
-      <td class="td-min">34'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">P. Baixos x Japão</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">P. Baixos</td>
-      <td class="td-jogador"><strong>Summerville</strong></td>
-      <td class="td-min">28'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">P. Baixos x Japão</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Japão</td>
-      <td class="td-jogador"><strong>Kamada</strong></td>
-      <td class="td-min">41'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">P. Baixos x Japão</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">P. Baixos</td>
-      <td class="td-jogador"><strong>Van Dijk</strong></td>
-      <td class="td-min">61'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">P. Baixos x Japão</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Japão</td>
-      <td class="td-jogador"><strong>Nakamura</strong></td>
-      <td class="td-min">85'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suécia x Tunísia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Suécia</td>
-      <td class="td-jogador"><strong>Isak</strong></td>
-      <td class="td-min">22'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suécia x Tunísia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Suécia</td>
-      <td class="td-jogador"><strong>Svanberg</strong></td>
-      <td class="td-min">49'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suécia x Tunísia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Tunísia</td>
-      <td class="td-jogador"><strong>Rekik</strong></td>
-      <td class="td-min">65'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suécia x Tunísia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Suécia</td>
-      <td class="td-jogador"><strong>Gyokeres</strong></td>
-      <td class="td-min">74'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suécia x Tunísia</td>
-      <td class="td-data">14/06/2026</td>
-      <td class="td-pais">Suécia</td>
-      <td class="td-jogador"><strong>Claesson</strong></td>
-      <td class="td-min">88'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Bélgica x Egito</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Bélgica</td>
-      <td class="td-jogador"><strong>Lukaku</strong></td>
-      <td class="td-min">55'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Bélgica x Egito</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Egito</td>
-      <td class="td-jogador"><strong>Ashour</strong></td>
-      <td class="td-min">78'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Arábia Saudita x Uruguai</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Arábia Saudita</td>
-      <td class="td-jogador"><strong>Al-Amri</strong></td>
-      <td class="td-min">31'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Arábia Saudita x Uruguai</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Uruguai</td>
-      <td class="td-jogador"><strong>Araújo</strong></td>
-      <td class="td-min">67'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Irã x Nova Zelândia</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Nova Zelândia</td>
-      <td class="td-jogador"><strong>Just</strong></td>
-      <td class="td-min">14'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Irã x Nova Zelândia</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Irã</td>
-      <td class="td-jogador"><strong>Mohebi</strong></td>
-      <td class="td-min">38'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Irã x Nova Zelândia</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Nova Zelândia</td>
-      <td class="td-jogador"><strong>Just</strong></td>
-      <td class="td-min">59'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Irã x Nova Zelândia</td>
-      <td class="td-data">15/06/2026</td>
-      <td class="td-pais">Irã</td>
-      <td class="td-jogador"><strong>Rezaeian</strong></td>
-      <td class="td-min">88'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">França x Senegal</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">França</td>
-      <td class="td-jogador"><strong>Mbappé</strong></td>
-      <td class="td-min">22'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">França x Senegal</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Senegal</td>
-      <td class="td-jogador"><strong>Diatta</strong></td>
-      <td class="td-min">51'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">França x Senegal</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">França</td>
-      <td class="td-jogador"><strong>Mbappé</strong></td>
-      <td class="td-min">68'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">França x Senegal</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">França</td>
-      <td class="td-jogador"><strong>Mbappé</strong></td>
-      <td class="td-min">82'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Iraque</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Haaland</strong></td>
-      <td class="td-min">9'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Iraque</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Haaland</strong></td>
-      <td class="td-min">31'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Iraque</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Iraque</td>
-      <td class="td-jogador"><strong>Ameen</strong></td>
-      <td class="td-min">49'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Iraque</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Haaland</strong></td>
-      <td class="td-min">67'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Iraque</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Haaland</strong></td>
-      <td class="td-min">78'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Argentina x Argélia</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Argentina</td>
-      <td class="td-jogador"><strong>Messi</strong></td>
-      <td class="td-min">18'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Argentina x Argélia</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Argentina</td>
-      <td class="td-jogador"><strong>Messi</strong></td>
-      <td class="td-min">44'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Argentina x Argélia</td>
-      <td class="td-data">16/06/2026</td>
-      <td class="td-pais">Argentina</td>
-      <td class="td-jogador"><strong>Messi</strong></td>
-      <td class="td-min">73'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Áustria x Jordânia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Áustria</td>
-      <td class="td-jogador"><strong>Gregoritsch</strong></td>
-      <td class="td-min">15'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Áustria x Jordânia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Áustria</td>
-      <td class="td-jogador"><strong>Sabitzer</strong></td>
-      <td class="td-min">38'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Áustria x Jordânia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Jordânia</td>
-      <td class="td-jogador"><strong>Bani Attiah</strong></td>
-      <td class="td-min">55'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Áustria x Jordânia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Áustria</td>
-      <td class="td-jogador"><strong>Arnautovic</strong></td>
-      <td class="td-min">82'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Portugal x RD Congo</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Portugal</td>
-      <td class="td-jogador"><strong>Cristiano Ronaldo</strong></td>
-      <td class="td-min">24'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Portugal x RD Congo</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">RD Congo</td>
-      <td class="td-jogador"><strong>Mbemba</strong></td>
-      <td class="td-min">77'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Inglaterra x Croácia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Inglaterra</td>
-      <td class="td-jogador"><strong>Kane</strong></td>
-      <td class="td-min">12'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Inglaterra x Croácia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Croácia</td>
-      <td class="td-jogador"><strong>Kramaric</strong></td>
-      <td class="td-min">29'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Inglaterra x Croácia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Inglaterra</td>
-      <td class="td-jogador"><strong>Bellingham</strong></td>
-      <td class="td-min">48'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Inglaterra x Croácia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Croácia</td>
-      <td class="td-jogador"><strong>Modric</strong></td>
-      <td class="td-min">61'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Inglaterra x Croácia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Inglaterra</td>
-      <td class="td-jogador"><strong>Kane</strong></td>
-      <td class="td-min">74'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Inglaterra x Croácia</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Inglaterra</td>
-      <td class="td-jogador"><strong>Saka</strong></td>
-      <td class="td-min">88'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Gana x Panamá</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Gana</td>
-      <td class="td-jogador"><strong>Kudus</strong></td>
-      <td class="td-min">44'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Colômbia x Uzbequistão</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Colômbia</td>
-      <td class="td-jogador"><strong>Díaz</strong></td>
-      <td class="td-min">19'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Colômbia x Uzbequistão</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Uzbequistão</td>
-      <td class="td-jogador"><strong>Shomurodov</strong></td>
-      <td class="td-min">37'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Colômbia x Uzbequistão</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Colômbia</td>
-      <td class="td-jogador"><strong>Borré</strong></td>
-      <td class="td-min">62'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Colômbia x Uzbequistão</td>
-      <td class="td-data">17/06/2026</td>
-      <td class="td-pais">Colômbia</td>
-      <td class="td-jogador"><strong>Vidal</strong></td>
-      <td class="td-min">83'</td>
-      <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">África do Sul x Tchequia</td>
-      <td class="td-data">18/06/2026</td>
-      <td class="td-pais">África do Sul</td>
-      <td class="td-jogador"><strong>Tau</strong></td>
-      <td class="td-min">33'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">África do Sul x Tchequia</td>
-      <td class="td-data">18/06/2026</td>
-      <td class="td-pais">Tchequia</td>
-      <td class="td-jogador"><strong>Soucek</strong></td>
-      <td class="td-min">71'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">México x Coreia do Sul</td>
-      <td class="td-data">18/06/2026</td>
-      <td class="td-pais">México</td>
-      <td class="td-jogador"><strong>Lozano</strong></td>
-      <td class="td-min">22'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">México x Coreia do Sul</td>
-      <td class="td-data">18/06/2026</td>
-      <td class="td-pais">Coreia do Sul</td>
-      <td class="td-jogador"><strong>Son</strong></td>
-      <td class="td-min">59'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">México x Coreia do Sul</td>
-      <td class="td-data">18/06/2026</td>
-      <td class="td-pais">México</td>
-      <td class="td-jogador"><strong>Jiménez</strong></td>
-      <td class="td-min">81'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Suíça</td>
-      <td class="td-jogador"><strong>Shaqiri</strong></td>
-      <td class="td-min">11'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Suíça</td>
-      <td class="td-jogador"><strong>Embolo</strong></td>
-      <td class="td-min">28'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Suíça</td>
-      <td class="td-jogador"><strong>Vargas</strong></td>
-      <td class="td-min">44'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Bósnia-Herzegovina</td>
-      <td class="td-jogador"><strong>Dzeko</strong></td>
-      <td class="td-min">62'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Suíça</td>
-      <td class="td-jogador"><strong>Amdouni</strong></td>
-      <td class="td-min">78'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Paraguai x Canadá</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Paraguai</td>
-      <td class="td-jogador"><strong>Sanabria</strong></td>
-      <td class="td-min">16'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Paraguai x Canadá</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Canadá</td>
-      <td class="td-jogador"><strong>David</strong></td>
-      <td class="td-min">41'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Paraguai x Canadá</td>
-      <td class="td-data">19/06/2026</td>
-      <td class="td-pais">Canadá</td>
-      <td class="td-jogador"><strong>David</strong></td>
-      <td class="td-min">65'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Turquia x Alemanha</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Musiala</strong></td>
-      <td class="td-min">7'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Turquia x Alemanha</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Turquia</td>
-      <td class="td-jogador"><strong>Calhanoglu</strong></td>
-      <td class="td-min">34'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Turquia x Alemanha</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Havertz</strong></td>
-      <td class="td-min">61'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Turquia x Alemanha</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Alemanha</td>
-      <td class="td-jogador"><strong>Wirtz</strong></td>
-      <td class="td-min">87'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Curaçao x Costa do Marfim</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Costa do Marfim</td>
-      <td class="td-jogador"><strong>Haller</strong></td>
-      <td class="td-min">29'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Curaçao x Costa do Marfim</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Costa do Marfim</td>
-      <td class="td-jogador"><strong>Pepe</strong></td>
-      <td class="td-min">74'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Catar</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">EUA</td>
-      <td class="td-jogador"><strong>Pulisic</strong></td>
-      <td class="td-min">18'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Catar</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">EUA</td>
-      <td class="td-jogador"><strong>Balogun</strong></td>
-      <td class="td-min">52'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">EUA x Catar</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">EUA</td>
-      <td class="td-jogador"><strong>Reyna</strong></td>
-      <td class="td-min">79'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Japão x Suécia</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Suécia</td>
-      <td class="td-jogador"><strong>Gyokeres</strong></td>
-      <td class="td-min">12'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Japão x Suécia</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Japão</td>
-      <td class="td-jogador"><strong>Minamino</strong></td>
-      <td class="td-min">38'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Japão x Suécia</td>
-      <td class="td-data">20/06/2026</td>
-      <td class="td-pais">Japão</td>
-      <td class="td-jogador"><strong>Osako</strong></td>
-      <td class="td-min">66'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Cabo Verde x Espanha</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Espanha</td>
-      <td class="td-jogador"><strong>Yamal</strong></td>
-      <td class="td-min">8'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Cabo Verde x Espanha</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Espanha</td>
-      <td class="td-jogador"><strong>Morata</strong></td>
-      <td class="td-min">35'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Cabo Verde x Espanha</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Espanha</td>
-      <td class="td-jogador"><strong>Nico Williams</strong></td>
-      <td class="td-min">57'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Tunísia x P. Baixos</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">P. Baixos</td>
-      <td class="td-jogador"><strong>Gakpo</strong></td>
-      <td class="td-min">24'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Tunísia x P. Baixos</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">P. Baixos</td>
-      <td class="td-jogador"><strong>Depay</strong></td>
-      <td class="td-min">48'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Tunísia x P. Baixos</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Tunísia</td>
-      <td class="td-jogador"><strong>Sliti</strong></td>
-      <td class="td-min">83'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Uruguai x Irã</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Uruguai</td>
-      <td class="td-jogador"><strong>Núñez</strong></td>
-      <td class="td-min">14'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Uruguai x Irã</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Uruguai</td>
-      <td class="td-jogador"><strong>Suárez</strong></td>
-      <td class="td-min">31'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Uruguai x Irã</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Irã</td>
-      <td class="td-jogador"><strong>Taremi</strong></td>
-      <td class="td-min">67'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Uruguai x Irã</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Uruguai</td>
-      <td class="td-jogador"><strong>Bentancur</strong></td>
-      <td class="td-min">88'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Egito x Bélgica</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Bélgica</td>
-      <td class="td-jogador"><strong>De Bruyne</strong></td>
-      <td class="td-min">22'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Egito x Bélgica</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Bélgica</td>
-      <td class="td-jogador"><strong>Lukaku</strong></td>
-      <td class="td-min">45'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Nova Zelândia x Arábia Saudita</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Arábia Saudita</td>
-      <td class="td-jogador"><strong>Al-Dawsari</strong></td>
-      <td class="td-min">43'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Nova Zelândia x Arábia Saudita</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Nova Zelândia</td>
-      <td class="td-jogador"><strong>Wood</strong></td>
-      <td class="td-min">77'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Marrocos x Haiti</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Marrocos</td>
-      <td class="td-jogador"><strong>Ziyech</strong></td>
-      <td class="td-min">19'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Marrocos x Haiti</td>
-      <td class="td-data">21/06/2026</td>
-      <td class="td-pais">Marrocos</td>
-      <td class="td-jogador"><strong>En-Nesyri</strong></td>
-      <td class="td-min">56'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Brasil x Escócia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Brasil</td>
-      <td class="td-jogador"><strong>Rodrygo</strong></td>
-      <td class="td-min">15'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Brasil x Escócia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Brasil</td>
-      <td class="td-jogador"><strong>Raphinha</strong></td>
-      <td class="td-min">34'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Brasil x Escócia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Escócia</td>
-      <td class="td-jogador"><strong>McTominay</strong></td>
-      <td class="td-min">61'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Brasil x Escócia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Brasil</td>
-      <td class="td-jogador"><strong>Vinícius Jr.</strong></td>
-      <td class="td-min">79'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Senegal x Argentina</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Argentina</td>
-      <td class="td-jogador"><strong>Messi</strong></td>
-      <td class="td-min">9'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Senegal x Argentina</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Senegal</td>
-      <td class="td-jogador"><strong>Dia</strong></td>
-      <td class="td-min">45'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Senegal x Argentina</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Argentina</td>
-      <td class="td-jogador"><strong>Álvarez</strong></td>
-      <td class="td-min">69'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Senegal x Argentina</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Argentina</td>
-      <td class="td-jogador"><strong>Di María</strong></td>
-      <td class="td-min">85'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Argélia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Haaland</strong></td>
-      <td class="td-min">5'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Argélia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Odegaard</strong></td>
-      <td class="td-min">33'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Argélia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Argélia</td>
-      <td class="td-jogador"><strong>Mahrez</strong></td>
-      <td class="td-min">59'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
-    <tr>
-      <td class="td-partida">Noruega x Argélia</td>
-      <td class="td-data">22/06/2026</td>
-      <td class="td-pais">Noruega</td>
-      <td class="td-jogador"><strong>Haaland</strong></td>
-      <td class="td-min">84'</td>
-      <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
-      <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
-    </tr>
+        
+      <tr>
+        <td class="td-partida">México x África do Sul</td>
+        <td class="td-data">11/06/2026</td>
+        <td class="td-pais">México</td>
+        <td class="td-jogador"><strong>Raúl Jiménez</strong></td>
+        <td class="td-min">67'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">México x África do Sul</td>
+        <td class="td-data">11/06/2026</td>
+        <td class="td-pais">México</td>
+        <td class="td-jogador"><strong>Julián Quiñones</strong></td>
+        <td class="td-min">9'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Coreia do Sul x Tchequia</td>
+        <td class="td-data">11/06/2026</td>
+        <td class="td-pais">Tchequia</td>
+        <td class="td-jogador"><strong>Ladislav Krejcí</strong></td>
+        <td class="td-min">59'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Coreia do Sul x Tchequia</td>
+        <td class="td-data">11/06/2026</td>
+        <td class="td-pais">Coreia do Sul</td>
+        <td class="td-jogador"><strong>Hwang In-Beom</strong></td>
+        <td class="td-min">67'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Coreia do Sul x Tchequia</td>
+        <td class="td-data">11/06/2026</td>
+        <td class="td-pais">Coreia do Sul</td>
+        <td class="td-jogador"><strong>Oh Hyeon-Gyu</strong></td>
+        <td class="td-min">80'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Bósnia-Herzegovina</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">Bósnia-Herzegovina</td>
+        <td class="td-jogador"><strong>Jovo Lukic</strong></td>
+        <td class="td-min">21'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Bósnia-Herzegovina</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Cyle Larin</strong></td>
+        <td class="td-min">78'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Paraguai</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">EUA</td>
+        <td class="td-jogador"><strong>Folarin Balogun</strong></td>
+        <td class="td-min">31'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Paraguai</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">EUA</td>
+        <td class="td-jogador"><strong>Folarin Balogun</strong></td>
+        <td class="td-min">45'+5'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Paraguai</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">EUA</td>
+        <td class="td-jogador"><strong>Damián Bobadilla</strong></td>
+        <td class="td-min">7'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Paraguai</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">Paraguai</td>
+        <td class="td-jogador"><strong>Maurício</strong></td>
+        <td class="td-min">73'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Paraguai</td>
+        <td class="td-data">12/06/2026</td>
+        <td class="td-pais">EUA</td>
+        <td class="td-jogador"><strong>Giovanni Reyna</strong></td>
+        <td class="td-min">90'+8'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Catar x Suíça</td>
+        <td class="td-data">13/06/2026</td>
+        <td class="td-pais">Suíça</td>
+        <td class="td-jogador"><strong>Breel Embolo</strong></td>
+        <td class="td-min">17'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Catar x Suíça</td>
+        <td class="td-data">13/06/2026</td>
+        <td class="td-pais">Catar</td>
+        <td class="td-jogador"><strong>Miro Muheim</strong></td>
+        <td class="td-min">90'+4'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Brasil x Marrocos</td>
+        <td class="td-data">13/06/2026</td>
+        <td class="td-pais">Marrocos</td>
+        <td class="td-jogador"><strong>Ismael Saibari</strong></td>
+        <td class="td-min">21'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Brasil x Marrocos</td>
+        <td class="td-data">13/06/2026</td>
+        <td class="td-pais">Brasil</td>
+        <td class="td-jogador"><strong>Vinícius Júnior</strong></td>
+        <td class="td-min">32'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Haiti x Escócia</td>
+        <td class="td-data">13/06/2026</td>
+        <td class="td-pais">Escócia</td>
+        <td class="td-jogador"><strong>John McGinn</strong></td>
+        <td class="td-min">28'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Austrália x Turquia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Austrália</td>
+        <td class="td-jogador"><strong>Nestory Irankunda</strong></td>
+        <td class="td-min">27'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Austrália x Turquia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Austrália</td>
+        <td class="td-jogador"><strong>Connor Metcalfe</strong></td>
+        <td class="td-min">75'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Curaçao</td>
+        <td class="td-jogador"><strong>Livano Comenencia</strong></td>
+        <td class="td-min">21'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Nico Schlotterbeck</strong></td>
+        <td class="td-min">38'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Kai Havertz</strong></td>
+        <td class="td-min">45'+5'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Jamal Musiala</strong></td>
+        <td class="td-min">47'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Felix Nmecha</strong></td>
+        <td class="td-min">6'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Nathaniel Brown</strong></td>
+        <td class="td-min">68'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Deniz Undav</strong></td>
+        <td class="td-min">78'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Curaçao</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Kai Havertz</strong></td>
+        <td class="td-min">88'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Japão</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Virgil van Dijk</strong></td>
+        <td class="td-min">51'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Japão</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Japão</td>
+        <td class="td-jogador"><strong>Keito Nakamura</strong></td>
+        <td class="td-min">57'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Japão</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Crysencio Summerville</strong></td>
+        <td class="td-min">64'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Japão</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Japão</td>
+        <td class="td-jogador"><strong>Daichi Kamada</strong></td>
+        <td class="td-min">89'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Costa do Marfim x Equador</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Costa do Marfim</td>
+        <td class="td-jogador"><strong>Amad Diallo</strong></td>
+        <td class="td-min">90'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suécia x Tunísia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Suécia</td>
+        <td class="td-jogador"><strong>Alexander Isak</strong></td>
+        <td class="td-min">30'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suécia x Tunísia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Tunísia</td>
+        <td class="td-jogador"><strong>Omar Rekik</strong></td>
+        <td class="td-min">43'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suécia x Tunísia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Suécia</td>
+        <td class="td-jogador"><strong>Viktor Gyökeres</strong></td>
+        <td class="td-min">59'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suécia x Tunísia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Suécia</td>
+        <td class="td-jogador"><strong>Yasin Ayari</strong></td>
+        <td class="td-min">7'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suécia x Tunísia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Suécia</td>
+        <td class="td-jogador"><strong>Mattias Svanberg</strong></td>
+        <td class="td-min">84'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suécia x Tunísia</td>
+        <td class="td-data">14/06/2026</td>
+        <td class="td-pais">Suécia</td>
+        <td class="td-jogador"><strong>Yasin Ayari</strong></td>
+        <td class="td-min">90'+6'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Bélgica x Egito</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Egito</td>
+        <td class="td-jogador"><strong>Emam Ashour</strong></td>
+        <td class="td-min">20'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Bélgica x Egito</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Bélgica</td>
+        <td class="td-jogador"><strong>Mohamed Hany</strong></td>
+        <td class="td-min">66'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Arábia Saudita x Uruguai</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Arábia Saudita</td>
+        <td class="td-jogador"><strong>Abdulelah Al-Amri</strong></td>
+        <td class="td-min">41'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Arábia Saudita x Uruguai</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Uruguai</td>
+        <td class="td-jogador"><strong>Maxi Araújo</strong></td>
+        <td class="td-min">80'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Irã x Nova Zelândia</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Irã</td>
+        <td class="td-jogador"><strong>Ramin Rezaeian</strong></td>
+        <td class="td-min">32'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Irã x Nova Zelândia</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Nova Zelândia</td>
+        <td class="td-jogador"><strong>Elijah Just</strong></td>
+        <td class="td-min">54'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Irã x Nova Zelândia</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Irã</td>
+        <td class="td-jogador"><strong>Mohammad Mohebbi</strong></td>
+        <td class="td-min">64'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Irã x Nova Zelândia</td>
+        <td class="td-data">15/06/2026</td>
+        <td class="td-pais">Nova Zelândia</td>
+        <td class="td-jogador"><strong>Elijah Just</strong></td>
+        <td class="td-min">7'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Senegal</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">França</td>
+        <td class="td-jogador"><strong>Kylian Mbappé</strong></td>
+        <td class="td-min">66'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Senegal</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">França</td>
+        <td class="td-jogador"><strong>Bradley Barcola</strong></td>
+        <td class="td-min">82'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Senegal</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Senegal</td>
+        <td class="td-jogador"><strong>Ibrahim Mbaye</strong></td>
+        <td class="td-min">90'+5'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Senegal</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">França</td>
+        <td class="td-jogador"><strong>Kylian Mbappé</strong></td>
+        <td class="td-min">90'+6'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Iraque x Noruega</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Erling Haaland</strong></td>
+        <td class="td-min">29'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Iraque x Noruega</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Iraque</td>
+        <td class="td-jogador"><strong>Aymen Hussein</strong></td>
+        <td class="td-min">39'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Iraque x Noruega</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Erling Haaland</strong></td>
+        <td class="td-min">43'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Iraque x Noruega</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Leo Østigard</strong></td>
+        <td class="td-min">76'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Iraque x Noruega</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Aymen Hussein</strong></td>
+        <td class="td-min">90'+6'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Argentina x Argélia</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Argentina</td>
+        <td class="td-jogador"><strong>Lionel Messi</strong></td>
+        <td class="td-min">17'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Argentina x Argélia</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Argentina</td>
+        <td class="td-jogador"><strong>Lionel Messi</strong></td>
+        <td class="td-min">60'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Argentina x Argélia</td>
+        <td class="td-data">16/06/2026</td>
+        <td class="td-pais">Argentina</td>
+        <td class="td-jogador"><strong>Lionel Messi</strong></td>
+        <td class="td-min">76'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Áustria x Jordânia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Áustria</td>
+        <td class="td-jogador"><strong>Romano Schmid</strong></td>
+        <td class="td-min">21'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Áustria x Jordânia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Jordânia</td>
+        <td class="td-jogador"><strong>Ali Olwan</strong></td>
+        <td class="td-min">50'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Áustria x Jordânia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Áustria</td>
+        <td class="td-jogador"><strong>Yazan Al-Arab</strong></td>
+        <td class="td-min">76'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Áustria x Jordânia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Áustria</td>
+        <td class="td-jogador"><strong>Marko Arnautovic</strong></td>
+        <td class="td-min">90'+12'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x RD Congo</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">RD Congo</td>
+        <td class="td-jogador"><strong>Yoane Wissa</strong></td>
+        <td class="td-min">45'+5'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x RD Congo</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Portugal</td>
+        <td class="td-jogador"><strong>João Neves</strong></td>
+        <td class="td-min">6'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Inglaterra x Croácia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Inglaterra</td>
+        <td class="td-jogador"><strong>Harry Kane</strong></td>
+        <td class="td-min">12'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Inglaterra x Croácia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Croácia</td>
+        <td class="td-jogador"><strong>Martin Baturina</strong></td>
+        <td class="td-min">36'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Inglaterra x Croácia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Inglaterra</td>
+        <td class="td-jogador"><strong>Harry Kane</strong></td>
+        <td class="td-min">42'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Inglaterra x Croácia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Croácia</td>
+        <td class="td-jogador"><strong>Petar Musa</strong></td>
+        <td class="td-min">45'+5'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Inglaterra x Croácia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Inglaterra</td>
+        <td class="td-jogador"><strong>Jude Bellingham</strong></td>
+        <td class="td-min">47'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Inglaterra x Croácia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Inglaterra</td>
+        <td class="td-jogador"><strong>Marcus Rashford</strong></td>
+        <td class="td-min">85'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Gana x Panamá</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Gana</td>
+        <td class="td-jogador"><strong>Caleb Yirenkyi</strong></td>
+        <td class="td-min">90'+5'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uzbequistão x Colômbia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Colômbia</td>
+        <td class="td-jogador"><strong>Daniel Muñoz</strong></td>
+        <td class="td-min">40'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uzbequistão x Colômbia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Uzbequistão</td>
+        <td class="td-jogador"><strong>Abbosbek Fayzullaev</strong></td>
+        <td class="td-min">60'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uzbequistão x Colômbia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Colômbia</td>
+        <td class="td-jogador"><strong>Luis Díaz</strong></td>
+        <td class="td-min">65'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uzbequistão x Colômbia</td>
+        <td class="td-data">17/06/2026</td>
+        <td class="td-pais">Colômbia</td>
+        <td class="td-jogador"><strong>Jáminton Campaz</strong></td>
+        <td class="td-min">90'+9'</td>
+        <td><span class="fase-badge" style="background:#e8f5e9;color:#1b5e20">Rodada 1</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Tchequia x África do Sul</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Tchequia</td>
+        <td class="td-jogador"><strong>Michal Sadílek</strong></td>
+        <td class="td-min">6'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Tchequia x África do Sul</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">África do Sul</td>
+        <td class="td-jogador"><strong>Teboho Mokoena</strong></td>
+        <td class="td-min">83'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Suíça</td>
+        <td class="td-jogador"><strong>Johan Manzambi</strong></td>
+        <td class="td-min">74'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Suíça</td>
+        <td class="td-jogador"><strong>Rubén Vargas</strong></td>
+        <td class="td-min">84'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Suíça</td>
+        <td class="td-jogador"><strong>Johan Manzambi</strong></td>
+        <td class="td-min">90'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Bósnia-Herzegovina</td>
+        <td class="td-jogador"><strong>Ermin Mahmic</strong></td>
+        <td class="td-min">90'+3'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Suíça x Bósnia-Herzegovina</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Suíça</td>
+        <td class="td-jogador"><strong>Granit Xhaka</strong></td>
+        <td class="td-min">90'+7'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#1565c0;color:#fff">🎯 Pênalti</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Catar</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Cyle Larin</strong></td>
+        <td class="td-min">16'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Catar</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Jonathan David</strong></td>
+        <td class="td-min">29'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Catar</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Jonathan David</strong></td>
+        <td class="td-min">45'+3'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Catar</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Nathan Saliba</strong></td>
+        <td class="td-min">64'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Catar</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Mohamed Manai</strong></td>
+        <td class="td-min">75'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Canadá x Catar</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">Canadá</td>
+        <td class="td-jogador"><strong>Jonathan David</strong></td>
+        <td class="td-min">90'+2'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">México x Coreia do Sul</td>
+        <td class="td-data">18/06/2026</td>
+        <td class="td-pais">México</td>
+        <td class="td-jogador"><strong>Luis Romo</strong></td>
+        <td class="td-min">50'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Austrália</td>
+        <td class="td-data">19/06/2026</td>
+        <td class="td-pais">EUA</td>
+        <td class="td-jogador"><strong>Cameron Burgess</strong></td>
+        <td class="td-min">11'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">EUA x Austrália</td>
+        <td class="td-data">19/06/2026</td>
+        <td class="td-pais">EUA</td>
+        <td class="td-jogador"><strong>Alex Freeman</strong></td>
+        <td class="td-min">43'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Escócia x Marrocos</td>
+        <td class="td-data">19/06/2026</td>
+        <td class="td-pais">Marrocos</td>
+        <td class="td-jogador"><strong>Ismael Saibari</strong></td>
+        <td class="td-min">2'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Brasil x Haiti</td>
+        <td class="td-data">19/06/2026</td>
+        <td class="td-pais">Brasil</td>
+        <td class="td-jogador"><strong>Matheus Cunha</strong></td>
+        <td class="td-min">23'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Brasil x Haiti</td>
+        <td class="td-data">19/06/2026</td>
+        <td class="td-pais">Brasil</td>
+        <td class="td-jogador"><strong>Matheus Cunha</strong></td>
+        <td class="td-min">36'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Brasil x Haiti</td>
+        <td class="td-data">19/06/2026</td>
+        <td class="td-pais">Brasil</td>
+        <td class="td-jogador"><strong>Vinícius Júnior</strong></td>
+        <td class="td-min">45'+3'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Turquia x Paraguai</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">Paraguai</td>
+        <td class="td-jogador"><strong>Matías Galarza</strong></td>
+        <td class="td-min">2'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Suécia</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Brian Brobbey</strong></td>
+        <td class="td-min">17'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Suécia</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Cody Gakpo</strong></td>
+        <td class="td-min">47'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Suécia</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Brian Brobbey</strong></td>
+        <td class="td-min">5'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Suécia</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Cody Gakpo</strong></td>
+        <td class="td-min">54'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Suécia</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">Suécia</td>
+        <td class="td-jogador"><strong>Anthony Elanga</strong></td>
+        <td class="td-min">59'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">P. Baixos x Suécia</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">P. Baixos</td>
+        <td class="td-jogador"><strong>Crysencio Summerville</strong></td>
+        <td class="td-min">89'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Costa do Marfim</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">Costa do Marfim</td>
+        <td class="td-jogador"><strong>Franck Kessié</strong></td>
+        <td class="td-min">30'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Costa do Marfim</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Deniz Undav</strong></td>
+        <td class="td-min">68'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Alemanha x Costa do Marfim</td>
+        <td class="td-data">20/06/2026</td>
+        <td class="td-pais">Alemanha</td>
+        <td class="td-jogador"><strong>Deniz Undav</strong></td>
+        <td class="td-min">90'+4'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Tunísia x Japão</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Japão</td>
+        <td class="td-jogador"><strong>Ayase Ueda</strong></td>
+        <td class="td-min">31'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Tunísia x Japão</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Japão</td>
+        <td class="td-jogador"><strong>Daichi Kamada</strong></td>
+        <td class="td-min">4'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Tunísia x Japão</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Japão</td>
+        <td class="td-jogador"><strong>Junya Ito</strong></td>
+        <td class="td-min">69'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Tunísia x Japão</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Japão</td>
+        <td class="td-jogador"><strong>Ayase Ueda</strong></td>
+        <td class="td-min">83'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Espanha x Arábia Saudita</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Espanha</td>
+        <td class="td-jogador"><strong>Lamine Yamal</strong></td>
+        <td class="td-min">10'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Espanha x Arábia Saudita</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Espanha</td>
+        <td class="td-jogador"><strong>Mikel Oyarzabal</strong></td>
+        <td class="td-min">21'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Espanha x Arábia Saudita</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Espanha</td>
+        <td class="td-jogador"><strong>Mikel Oyarzabal</strong></td>
+        <td class="td-min">24'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Espanha x Arábia Saudita</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Espanha</td>
+        <td class="td-jogador"><strong>Hassan Al-Tambakti</strong></td>
+        <td class="td-min">49'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uruguai x Cabo Verde</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Cabo Verde</td>
+        <td class="td-jogador"><strong>Kevin Pina</strong></td>
+        <td class="td-min">21'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uruguai x Cabo Verde</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Uruguai</td>
+        <td class="td-jogador"><strong>Maxi Araújo</strong></td>
+        <td class="td-min">44'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uruguai x Cabo Verde</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Uruguai</td>
+        <td class="td-jogador"><strong>Agustín Canobbio</strong></td>
+        <td class="td-min">45'+6'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Uruguai x Cabo Verde</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Cabo Verde</td>
+        <td class="td-jogador"><strong>Hélio Varela</strong></td>
+        <td class="td-min">61'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Nova Zelândia x Egito</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Nova Zelândia</td>
+        <td class="td-jogador"><strong>Finn Surman</strong></td>
+        <td class="td-min">15'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Nova Zelândia x Egito</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Egito</td>
+        <td class="td-jogador"><strong>Mostafa Zico</strong></td>
+        <td class="td-min">58'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Nova Zelândia x Egito</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Egito</td>
+        <td class="td-jogador"><strong>Mohamed Salah</strong></td>
+        <td class="td-min">67'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Nova Zelândia x Egito</td>
+        <td class="td-data">21/06/2026</td>
+        <td class="td-pais">Egito</td>
+        <td class="td-jogador"><strong>Trézéguet</strong></td>
+        <td class="td-min">82'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Argentina x Áustria</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Argentina</td>
+        <td class="td-jogador"><strong>Lionel Messi</strong></td>
+        <td class="td-min">38'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Argentina x Áustria</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Argentina</td>
+        <td class="td-jogador"><strong>Lionel Messi</strong></td>
+        <td class="td-min">90'+5'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Iraque</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">França</td>
+        <td class="td-jogador"><strong>Kylian Mbappé</strong></td>
+        <td class="td-min">14'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Iraque</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">França</td>
+        <td class="td-jogador"><strong>Kylian Mbappé</strong></td>
+        <td class="td-min">54'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">França x Iraque</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">França</td>
+        <td class="td-jogador"><strong>Ousmane Dembélé</strong></td>
+        <td class="td-min">66'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Noruega x Senegal</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Marcus Holmgren Pedersen</strong></td>
+        <td class="td-min">43'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Noruega x Senegal</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Erling Haaland</strong></td>
+        <td class="td-min">48'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Noruega x Senegal</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Senegal</td>
+        <td class="td-jogador"><strong>Ismaïla Sarr</strong></td>
+        <td class="td-min">53'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Noruega x Senegal</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Noruega</td>
+        <td class="td-jogador"><strong>Erling Haaland</strong></td>
+        <td class="td-min">58'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Noruega x Senegal</td>
+        <td class="td-data">22/06/2026</td>
+        <td class="td-pais">Senegal</td>
+        <td class="td-jogador"><strong>Ismaïla Sarr</strong></td>
+        <td class="td-min">90'+3'</td>
+        <td><span class="fase-badge" style="background:#e3f2fd;color:#0d47a1">Rodada 2</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Jordânia x Argélia</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Jordânia</td>
+        <td class="td-jogador"><strong>Nizar Al-Rashdan</strong></td>
+        <td class="td-min">36'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Jordânia x Argélia</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Argélia</td>
+        <td class="td-jogador"><strong>Nadhir Benbouali</strong></td>
+        <td class="td-min">69'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Jordânia x Argélia</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Argélia</td>
+        <td class="td-jogador"><strong>Amine Gouiri</strong></td>
+        <td class="td-min">82'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x Uzbequistão</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Portugal</td>
+        <td class="td-jogador"><strong>Nuno Mendes</strong></td>
+        <td class="td-min">17'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x Uzbequistão</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Portugal</td>
+        <td class="td-jogador"><strong>Cristiano Ronaldo</strong></td>
+        <td class="td-min">39'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x Uzbequistão</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Portugal</td>
+        <td class="td-jogador"><strong>Cristiano Ronaldo</strong></td>
+        <td class="td-min">6'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x Uzbequistão</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Portugal</td>
+        <td class="td-jogador"><strong>Abduvohid Nematov</strong></td>
+        <td class="td-min">60'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#b71c1c;color:#fff">😬 Gol Contra</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Portugal x Uzbequistão</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Portugal</td>
+        <td class="td-jogador"><strong>Rafael Leão</strong></td>
+        <td class="td-min">87'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Panamá x Croácia</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Croácia</td>
+        <td class="td-jogador"><strong>Ante Budimir</strong></td>
+        <td class="td-min">54'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
+      <tr>
+        <td class="td-partida">Colômbia x RD Congo</td>
+        <td class="td-data">23/06/2026</td>
+        <td class="td-pais">Colômbia</td>
+        <td class="td-jogador"><strong>Daniel Muñoz</strong></td>
+        <td class="td-min">76'</td>
+        <td><span class="fase-badge" style="background:#fff8e1;color:#f57f17">Rodada 3</span></td>
+        <td><span class="tipo-badge" style="background:#43a047;color:#fff">⚽ Gol</span></td>
+      </tr>
       </tbody>
     </table>
   </div>
+
   <p id="contador" style="margin-top:10px;font-size:0.82rem;color:#484f58"></p>
+
 </div>
+
 <footer>
   Dados: ESPN API · Atualização automática a cada 12h via GitHub Actions · Copa do Mundo 2026
 </footer>
+
 <script>
   function filtrar() {
     const busca = document.getElementById('busca').value.toLowerCase();
@@ -1258,5 +1509,6 @@
       vis < linhas.length ? `Mostrando ${vis} de ${linhas.length} gols` : '';
   }
 </script>
+
 </body>
 </html>
