@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "24/06/2026 17:05",
-  "total_linhas": 145,
+  "ultima_atualizacao_brasilia": "24/06/2026 18:44",
+  "total_linhas": 148,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -855,7 +855,7 @@
       "hora_jogo": "16:00"
     },
     {
-      "nome_jogador": "Sultan Al-Brake",
+      "nome_jogador": "Mahmoud Abunada",
       "pais": "Bósnia-Herzegovina",
       "data_jogo": "24/06/2026",
       "hora_jogo": "16:00"
@@ -867,8 +867,26 @@
       "hora_jogo": "16:00"
     },
     {
+      "nome_jogador": "Ermin Mahmic",
+      "pais": "Bósnia-Herzegovina",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
       "nome_jogador": "Rubén Vargas",
       "pais": "Suíça",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Johan Manzambi",
+      "pais": "Suíça",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Promise David",
+      "pais": "Canadá",
       "data_jogo": "24/06/2026",
       "hora_jogo": "16:00"
     }
