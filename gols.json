@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "25/06/2026 17:22",
-  "total_linhas": 164,
+  "ultima_atualizacao_brasilia": "25/06/2026 19:45",
+  "total_linhas": 166,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -975,6 +975,12 @@
       "hora_jogo": "17:00"
     },
     {
+      "nome_jogador": "Nicolas Pépé",
+      "pais": "Costa do Marfim",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
       "nome_jogador": "Leroy Sané",
       "pais": "Alemanha",
       "data_jogo": "25/06/2026",
@@ -982,6 +988,12 @@
     },
     {
       "nome_jogador": "Nilson Angulo",
+      "pais": "Equador",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Gonzalo Plata",
       "pais": "Equador",
       "data_jogo": "25/06/2026",
       "hora_jogo": "17:00"
