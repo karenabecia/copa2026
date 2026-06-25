@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "24/06/2026 20:21",
-  "total_linhas": 154,
+  "ultima_atualizacao_brasilia": "25/06/2026 01:33",
+  "total_linhas": 161,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -915,6 +915,18 @@
       "hora_jogo": "19:00"
     },
     {
+      "nome_jogador": "Soufiane Rahimi",
+      "pais": "Marrocos",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Gessime Yassine",
+      "pais": "Marrocos",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
       "nome_jogador": "Vinícius Júnior",
       "pais": "Brasil",
       "data_jogo": "24/06/2026",
@@ -925,6 +937,36 @@
       "pais": "Brasil",
       "data_jogo": "24/06/2026",
       "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Matheus Cunha",
+      "pais": "Brasil",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Mateo Chávez",
+      "pais": "México",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Julián Quiñones",
+      "pais": "México",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Álvaro Fidalgo",
+      "pais": "México",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Thapelo Maseko",
+      "pais": "África do Sul",
+      "data_jogo": "24/06/2026",
+      "hora_jogo": "22:00"
     }
   ]
 }
