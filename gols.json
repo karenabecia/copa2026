@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "25/06/2026 22:29",
-  "total_linhas": 172,
+  "ultima_atualizacao_brasilia": "26/06/2026 03:20",
+  "total_linhas": 177,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1033,6 +1033,36 @@
       "pais": "Países Baixos",
       "data_jogo": "25/06/2026",
       "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Auston Trusty",
+      "pais": "EUA",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Arda Güler",
+      "pais": "Turquia",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Baris Alper Yilmaz",
+      "pais": "Turquia",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Sebastian Berhalter",
+      "pais": "EUA",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Kaan Ayhan",
+      "pais": "Turquia",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "23:00"
     }
   ]
 }
