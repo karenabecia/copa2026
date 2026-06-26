@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "25/06/2026 19:45",
-  "total_linhas": 166,
+  "ultima_atualizacao_brasilia": "25/06/2026 22:29",
+  "total_linhas": 172,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -997,6 +997,42 @@
       "pais": "Equador",
       "data_jogo": "25/06/2026",
       "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Daizen Maeda",
+      "pais": "Japão",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Anthony Elanga",
+      "pais": "Suécia",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Ellyes Skhiri",
+      "pais": "Países Baixos",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Brian Brobbey",
+      "pais": "Países Baixos",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Hazem Mastouri",
+      "pais": "Tunísia",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Jan Paul van Hecke",
+      "pais": "Países Baixos",
+      "data_jogo": "25/06/2026",
+      "hora_jogo": "20:00"
     }
   ]
 }
