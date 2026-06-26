@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "26/06/2026 16:03",
-  "total_linhas": 177,
+  "ultima_atualizacao_brasilia": "26/06/2026 17:58",
+  "total_linhas": 187,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1063,6 +1063,66 @@
       "pais": "Turquia",
       "data_jogo": "25/06/2026",
       "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Ousmane Dembélé",
+      "pais": "França",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ousmane Dembélé",
+      "pais": "França",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Thelo Aasgaard",
+      "pais": "Noruega",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ousmane Dembélé",
+      "pais": "França",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Désiré Doué",
+      "pais": "França",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Habib Diarra",
+      "pais": "Senegal",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ismaïla Sarr",
+      "pais": "Senegal",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Pape Gueye",
+      "pais": "Senegal",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Pape Gueye",
+      "pais": "Senegal",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Iliman Ndiaye",
+      "pais": "Senegal",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "16:00"
     }
   ]
 }
