@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "27/06/2026 19:16",
-  "total_linhas": 197,
+  "ultima_atualizacao_brasilia": "27/06/2026 20:17",
+  "total_linhas": 201,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1181,6 +1181,30 @@
     {
       "nome_jogador": "Petar Sucic",
       "pais": "Croácia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Derrick Luckassen",
+      "pais": "Gana",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Nikola Vlasic",
+      "pais": "Croácia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Jude Bellingham",
+      "pais": "Inglaterra",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Harry Kane",
+      "pais": "Inglaterra",
       "data_jogo": "27/06/2026",
       "hora_jogo": "18:00"
     }
