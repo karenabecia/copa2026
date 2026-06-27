@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "26/06/2026 21:20",
-  "total_linhas": 187,
+  "ultima_atualizacao_brasilia": "27/06/2026 02:03",
+  "total_linhas": 196,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1123,6 +1123,60 @@
       "pais": "Senegal",
       "data_jogo": "26/06/2026",
       "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Álex Baena",
+      "pais": "Espanha",
+      "data_jogo": "26/06/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Mahmoud Saber",
+      "pais": "Egito",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Ramin Rezaeian",
+      "pais": "Irã",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Leandro Trossard",
+      "pais": "Bélgica",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Leandro Trossard",
+      "pais": "Bélgica",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Kevin De Bruyne",
+      "pais": "Bélgica",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Elijah Just",
+      "pais": "Nova Zelândia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Romelu Lukaku",
+      "pais": "Bélgica",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Alexis Saelemaekers",
+      "pais": "Bélgica",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "00:00"
     }
   ]
 }
