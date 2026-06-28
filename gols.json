@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "27/06/2026 20:17",
-  "total_linhas": 201,
+  "ultima_atualizacao_brasilia": "28/06/2026 01:48",
+  "total_linhas": 215,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1207,6 +1207,90 @@
       "pais": "Inglaterra",
       "data_jogo": "27/06/2026",
       "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Eldor Shomurodov",
+      "pais": "Uzbequistão",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "20:30"
+    },
+    {
+      "nome_jogador": "Yoane Wissa",
+      "pais": "RD Congo",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "20:30"
+    },
+    {
+      "nome_jogador": "Fiston Mayele",
+      "pais": "RD Congo",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "20:30"
+    },
+    {
+      "nome_jogador": "Yoane Wissa",
+      "pais": "RD Congo",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "20:30"
+    },
+    {
+      "nome_jogador": "Marko Arnautovic",
+      "pais": "Áustria",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Rafik Belghali",
+      "pais": "Argélia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Marcel Sabitzer",
+      "pais": "Áustria",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Riyad Mahrez",
+      "pais": "Argélia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Riyad Mahrez",
+      "pais": "Argélia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Sasa Kalajdzic",
+      "pais": "Áustria",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Giovani Lo Celso",
+      "pais": "Argentina",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Lautaro Martínez",
+      "pais": "Argentina",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Mousa Al-Tamari",
+      "pais": "Jordânia",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "27/06/2026",
+      "hora_jogo": "23:00"
     }
   ]
 }
