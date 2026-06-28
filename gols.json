@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "28/06/2026 17:36",
-  "total_linhas": 215,
+  "ultima_atualizacao_brasilia": "28/06/2026 19:14",
+  "total_linhas": 216,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1291,6 +1291,12 @@
       "pais": "Argentina",
       "data_jogo": "27/06/2026",
       "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Stephen Eustáquio",
+      "pais": "Canadá",
+      "data_jogo": "28/06/2026",
+      "hora_jogo": "16:00"
     }
   ]
 }
