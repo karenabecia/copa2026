@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "29/06/2026 18:44",
-  "total_linhas": 220,
+  "ultima_atualizacao_brasilia": "29/06/2026 20:15",
+  "total_linhas": 221,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1319,6 +1319,12 @@
     {
       "nome_jogador": "Julio Enciso",
       "pais": "Paraguai",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Kai Havertz",
+      "pais": "Alemanha",
       "data_jogo": "29/06/2026",
       "hora_jogo": "17:30"
     }
