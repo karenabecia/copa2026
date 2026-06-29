@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "29/06/2026 11:19",
-  "total_linhas": 216,
+  "ultima_atualizacao_brasilia": "29/06/2026 14:48",
+  "total_linhas": 217,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1297,6 +1297,12 @@
       "pais": "Canadá",
       "data_jogo": "28/06/2026",
       "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Kaishu Sano",
+      "pais": "Japão",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "14:00"
     }
   ]
 }
