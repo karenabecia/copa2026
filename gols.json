@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "29/06/2026 17:15",
-  "total_linhas": 219,
+  "ultima_atualizacao_brasilia": "29/06/2026 18:44",
+  "total_linhas": 220,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1315,6 +1315,12 @@
       "pais": "Brasil",
       "data_jogo": "29/06/2026",
       "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Julio Enciso",
+      "pais": "Paraguai",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
     }
   ]
 }
