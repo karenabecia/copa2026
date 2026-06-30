@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "29/06/2026 20:15",
-  "total_linhas": 221,
+  "ultima_atualizacao_brasilia": "29/06/2026 21:20",
+  "total_linhas": 228,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1325,6 +1325,48 @@
     {
       "nome_jogador": "Kai Havertz",
       "pais": "Alemanha",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Maurício",
+      "pais": "Paraguai",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Joshua Kimmich",
+      "pais": "Alemanha",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Gustavo Gómez",
+      "pais": "Paraguai",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Jamal Musiala",
+      "pais": "Alemanha",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Matías Galarza",
+      "pais": "Paraguai",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Nadiem Amiri",
+      "pais": "Alemanha",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "José Canale",
+      "pais": "Paraguai",
       "data_jogo": "29/06/2026",
       "hora_jogo": "17:30"
     }
