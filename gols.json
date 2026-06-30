@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "30/06/2026 14:15",
-  "total_linhas": 235,
+  "ultima_atualizacao_brasilia": "30/06/2026 16:06",
+  "total_linhas": 238,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1411,6 +1411,24 @@
       "pais": "Marrocos",
       "data_jogo": "29/06/2026",
       "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Antonio Nusa",
+      "pais": "Noruega",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Amad Diallo",
+      "pais": "Costa do Marfim",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "14:00"
     }
   ]
 }
