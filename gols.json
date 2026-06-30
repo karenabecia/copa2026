@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "30/06/2026 18:04",
-  "total_linhas": 238,
+  "ultima_atualizacao_brasilia": "30/06/2026 19:39",
+  "total_linhas": 241,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1429,6 +1429,24 @@
       "pais": "Noruega",
       "data_jogo": "30/06/2026",
       "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Bradley Barcola",
+      "pais": "França",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "18:00"
     }
   ]
 }
