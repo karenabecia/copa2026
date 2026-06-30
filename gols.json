@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "29/06/2026 21:20",
-  "total_linhas": 228,
+  "ultima_atualizacao_brasilia": "30/06/2026 02:17",
+  "total_linhas": 235,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1369,6 +1369,48 @@
       "pais": "Paraguai",
       "data_jogo": "29/06/2026",
       "hora_jogo": "17:30"
+    },
+    {
+      "nome_jogador": "Cody Gakpo",
+      "pais": "Países Baixos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Issa Diop",
+      "pais": "Marrocos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Teun Koopmeiners",
+      "pais": "Países Baixos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Soufiane Rahimi",
+      "pais": "Marrocos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Wout Weghorst",
+      "pais": "Países Baixos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Chemsdine Talbi",
+      "pais": "Marrocos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Ismael Saibari",
+      "pais": "Marrocos",
+      "data_jogo": "29/06/2026",
+      "hora_jogo": "22:00"
     }
   ]
 }
