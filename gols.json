@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "01/07/2026 17:16",
-  "total_linhas": 246,
+  "ultima_atualizacao_brasilia": "01/07/2026 18:49",
+  "total_linhas": 249,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1477,6 +1477,24 @@
       "pais": "Inglaterra",
       "data_jogo": "01/07/2026",
       "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Habib Diarra",
+      "pais": "Senegal",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Ismaïla Sarr",
+      "pais": "Senegal",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Romelu Lukaku",
+      "pais": "Bélgica",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "17:00"
     }
   ]
 }
