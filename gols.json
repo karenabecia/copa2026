@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "01/07/2026 12:49",
-  "total_linhas": 243,
+  "ultima_atualizacao_brasilia": "01/07/2026 15:16",
+  "total_linhas": 246,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1459,6 +1459,24 @@
       "pais": "México",
       "data_jogo": "30/06/2026",
       "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Brian Cipenga",
+      "pais": "RD Congo",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Harry Kane",
+      "pais": "Inglaterra",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Harry Kane",
+      "pais": "Inglaterra",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "13:00"
     }
   ]
 }
