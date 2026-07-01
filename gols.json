@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "01/07/2026 18:49",
-  "total_linhas": 249,
+  "ultima_atualizacao_brasilia": "01/07/2026 20:42",
+  "total_linhas": 251,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1492,6 +1492,18 @@
     },
     {
       "nome_jogador": "Romelu Lukaku",
+      "pais": "Bélgica",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Youri Tielemans",
+      "pais": "Bélgica",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Youri Tielemans",
       "pais": "Bélgica",
       "data_jogo": "01/07/2026",
       "hora_jogo": "17:00"
