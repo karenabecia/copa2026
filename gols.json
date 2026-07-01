@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "30/06/2026 21:21",
-  "total_linhas": 241,
+  "ultima_atualizacao_brasilia": "01/07/2026 02:54",
+  "total_linhas": 243,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1447,6 +1447,18 @@
       "pais": "França",
       "data_jogo": "30/06/2026",
       "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Julián Quiñones",
+      "pais": "México",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "23:00"
+    },
+    {
+      "nome_jogador": "Raúl Jiménez",
+      "pais": "México",
+      "data_jogo": "30/06/2026",
+      "hora_jogo": "23:00"
     }
   ]
 }
