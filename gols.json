@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "01/07/2026 20:42",
-  "total_linhas": 251,
+  "ultima_atualizacao_brasilia": "02/07/2026 01:20",
+  "total_linhas": 253,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1507,6 +1507,18 @@
       "pais": "Bélgica",
       "data_jogo": "01/07/2026",
       "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Folarin Balogun",
+      "pais": "EUA",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Malik Tillman",
+      "pais": "EUA",
+      "data_jogo": "01/07/2026",
+      "hora_jogo": "21:00"
     }
   ]
 }
