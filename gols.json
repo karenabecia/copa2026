@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "03/07/2026 13:44",
-  "total_linhas": 261,
+  "ultima_atualizacao_brasilia": "03/07/2026 15:38",
+  "total_linhas": 262,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1567,6 +1567,12 @@
       "pais": "Suíça",
       "data_jogo": "03/07/2026",
       "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Emam Ashour",
+      "pais": "Egito",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
     }
   ]
 }
