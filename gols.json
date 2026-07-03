@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "03/07/2026 17:32",
-  "total_linhas": 263,
+  "ultima_atualizacao_brasilia": "03/07/2026 19:15",
+  "total_linhas": 269,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1577,6 +1577,42 @@
     {
       "nome_jogador": "Mohamed Hany",
       "pais": "Austrália",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Mahmoud Saber",
+      "pais": "Egito",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Jackson Irvine",
+      "pais": "Austrália",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Ramy Rabia",
+      "pais": "Egito",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Awer Mabil",
+      "pais": "Austrália",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Mohamed Salah",
+      "pais": "Egito",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Hossam Abdelmaguid",
+      "pais": "Egito",
       "data_jogo": "03/07/2026",
       "hora_jogo": "15:00"
     }
