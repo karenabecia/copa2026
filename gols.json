@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "02/07/2026 19:18",
-  "total_linhas": 256,
+  "ultima_atualizacao_brasilia": "02/07/2026 21:18",
+  "total_linhas": 257,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1537,6 +1537,12 @@
       "pais": "Espanha",
       "data_jogo": "02/07/2026",
       "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Ivan Perisic",
+      "pais": "Croácia",
+      "data_jogo": "02/07/2026",
+      "hora_jogo": "20:00"
     }
   ]
 }
