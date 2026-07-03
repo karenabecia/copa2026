@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "03/07/2026 19:15",
-  "total_linhas": 269,
+  "ultima_atualizacao_brasilia": "03/07/2026 20:19",
+  "total_linhas": 270,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1615,6 +1615,12 @@
       "pais": "Egito",
       "data_jogo": "03/07/2026",
       "hora_jogo": "15:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "19:00"
     }
   ]
 }
