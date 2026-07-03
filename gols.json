@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "02/07/2026 21:18",
-  "total_linhas": 257,
+  "ultima_atualizacao_brasilia": "03/07/2026 01:56",
+  "total_linhas": 261,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1543,6 +1543,30 @@
       "pais": "Croácia",
       "data_jogo": "02/07/2026",
       "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Cristiano Ronaldo",
+      "pais": "Portugal",
+      "data_jogo": "02/07/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Gonçalo Ramos",
+      "pais": "Portugal",
+      "data_jogo": "02/07/2026",
+      "hora_jogo": "20:00"
+    },
+    {
+      "nome_jogador": "Breel Embolo",
+      "pais": "Suíça",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "00:00"
+    },
+    {
+      "nome_jogador": "Dan Ndoye",
+      "pais": "Suíça",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "00:00"
     }
   ]
 }
