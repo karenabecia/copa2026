@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "04/07/2026 19:11",
-  "total_linhas": 278,
+  "ultima_atualizacao_brasilia": "04/07/2026 20:12",
+  "total_linhas": 279,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1669,6 +1669,12 @@
       "pais": "Marrocos",
       "data_jogo": "04/07/2026",
       "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "04/07/2026",
+      "hora_jogo": "18:00"
     }
   ]
 }
