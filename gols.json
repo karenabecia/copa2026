@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "04/07/2026 14:18",
-  "total_linhas": 275,
+  "ultima_atualizacao_brasilia": "04/07/2026 16:35",
+  "total_linhas": 278,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1651,6 +1651,24 @@
       "pais": "Colômbia",
       "data_jogo": "03/07/2026",
       "hora_jogo": "22:30"
+    },
+    {
+      "nome_jogador": "Azzedine Ounahi",
+      "pais": "Marrocos",
+      "data_jogo": "04/07/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Azzedine Ounahi",
+      "pais": "Marrocos",
+      "data_jogo": "04/07/2026",
+      "hora_jogo": "14:00"
+    },
+    {
+      "nome_jogador": "Soufiane Rahimi",
+      "pais": "Marrocos",
+      "data_jogo": "04/07/2026",
+      "hora_jogo": "14:00"
     }
   ]
 }
