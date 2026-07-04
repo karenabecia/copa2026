@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "03/07/2026 20:19",
-  "total_linhas": 270,
+  "ultima_atualizacao_brasilia": "04/07/2026 01:00",
+  "total_linhas": 275,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1621,6 +1621,36 @@
       "pais": "Argentina",
       "data_jogo": "03/07/2026",
       "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Deroy Duarte",
+      "pais": "Cabo Verde",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Lisandro Martínez",
+      "pais": "Argentina",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Sidny Lopes Cabral",
+      "pais": "Cabo Verde",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Diney Borges",
+      "pais": "Argentina",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "19:00"
+    },
+    {
+      "nome_jogador": "Jhon Arias",
+      "pais": "Colômbia",
+      "data_jogo": "03/07/2026",
+      "hora_jogo": "22:30"
     }
   ]
 }
