@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "05/07/2026 18:18",
-  "total_linhas": 279,
+  "ultima_atualizacao_brasilia": "05/07/2026 20:16",
+  "total_linhas": 282,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1675,6 +1675,24 @@
       "pais": "França",
       "data_jogo": "04/07/2026",
       "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Erling Haaland",
+      "pais": "Noruega",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Neymar",
+      "pais": "Brasil",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "17:00"
     }
   ]
 }
