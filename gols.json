@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "05/07/2026 21:18",
-  "total_linhas": 282,
+  "ultima_atualizacao_brasilia": "06/07/2026 02:36",
+  "total_linhas": 287,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1693,6 +1693,36 @@
       "pais": "Brasil",
       "data_jogo": "05/07/2026",
       "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Jude Bellingham",
+      "pais": "Inglaterra",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Jude Bellingham",
+      "pais": "Inglaterra",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Julián Quiñones",
+      "pais": "México",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Harry Kane",
+      "pais": "Inglaterra",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Raúl Jiménez",
+      "pais": "México",
+      "data_jogo": "05/07/2026",
+      "hora_jogo": "22:00"
     }
   ]
 }
