@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "07/07/2026 14:25",
-  "total_linhas": 294,
+  "ultima_atualizacao_brasilia": "07/07/2026 17:13",
+  "total_linhas": 298,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1763,6 +1763,30 @@
     {
       "nome_jogador": "Yasser Ibrahim",
       "pais": "Egito",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Mostafa Zico",
+      "pais": "Egito",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Cristian Romero",
+      "pais": "Argentina",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Lionel Messi",
+      "pais": "Argentina",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Enzo Fernández",
+      "pais": "Argentina",
       "data_jogo": "07/07/2026",
       "hora_jogo": "13:00"
     }
