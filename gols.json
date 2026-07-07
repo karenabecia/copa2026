@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "07/07/2026 12:13",
-  "total_linhas": 293,
+  "ultima_atualizacao_brasilia": "07/07/2026 14:25",
+  "total_linhas": 294,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1759,6 +1759,12 @@
       "pais": "Bélgica",
       "data_jogo": "06/07/2026",
       "hora_jogo": "21:00"
+    },
+    {
+      "nome_jogador": "Yasser Ibrahim",
+      "pais": "Egito",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "13:00"
     }
   ]
 }
