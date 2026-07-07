@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "07/07/2026 18:41",
-  "total_linhas": 298,
+  "ultima_atualizacao_brasilia": "07/07/2026 20:14",
+  "total_linhas": 305,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1789,6 +1789,48 @@
       "pais": "Argentina",
       "data_jogo": "07/07/2026",
       "hora_jogo": "13:00"
+    },
+    {
+      "nome_jogador": "Juan Fernando Quintero",
+      "pais": "Colômbia",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Granit Xhaka",
+      "pais": "Suíça",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Zeki Amdouni",
+      "pais": "Suíça",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Jáminton Campaz",
+      "pais": "Colômbia",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Cedric Itten",
+      "pais": "Suíça",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Luis Díaz",
+      "pais": "Colômbia",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Rubén Vargas",
+      "pais": "Suíça",
+      "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
     }
   ]
 }
