@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "09/07/2026 17:03",
-  "total_linhas": 305,
+  "ultima_atualizacao_brasilia": "09/07/2026 18:43",
+  "total_linhas": 307,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1830,6 +1830,18 @@
       "nome_jogador": "Rubén Vargas",
       "pais": "Suíça",
       "data_jogo": "07/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "09/07/2026",
+      "hora_jogo": "17:00"
+    },
+    {
+      "nome_jogador": "Ousmane Dembélé",
+      "pais": "França",
+      "data_jogo": "09/07/2026",
       "hora_jogo": "17:00"
     }
   ]
