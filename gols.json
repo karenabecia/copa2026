@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "10/07/2026 17:41",
-  "total_linhas": 309,
+  "ultima_atualizacao_brasilia": "10/07/2026 19:15",
+  "total_linhas": 310,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1853,6 +1853,12 @@
     {
       "nome_jogador": "Charles De Ketelaere",
       "pais": "Bélgica",
+      "data_jogo": "10/07/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Mikel Merino",
+      "pais": "Espanha",
       "data_jogo": "10/07/2026",
       "hora_jogo": "16:00"
     }
