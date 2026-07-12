@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "11/07/2026 21:09",
-  "total_linhas": 313,
+  "ultima_atualizacao_brasilia": "12/07/2026 00:55",
+  "total_linhas": 317,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1879,6 +1879,30 @@
       "pais": "Inglaterra",
       "data_jogo": "11/07/2026",
       "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Alexis Mac Allister",
+      "pais": "Argentina",
+      "data_jogo": "11/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Dan Ndoye",
+      "pais": "Suíça",
+      "data_jogo": "11/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Julián Álvarez",
+      "pais": "Argentina",
+      "data_jogo": "11/07/2026",
+      "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Lautaro Martínez",
+      "pais": "Argentina",
+      "data_jogo": "11/07/2026",
+      "hora_jogo": "22:00"
     }
   ]
 }
