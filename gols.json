@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "11/07/2026 20:09",
-  "total_linhas": 312,
+  "ultima_atualizacao_brasilia": "11/07/2026 21:09",
+  "total_linhas": 313,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1865,6 +1865,12 @@
     {
       "nome_jogador": "Andreas Schjelderup",
       "pais": "Noruega",
+      "data_jogo": "11/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Jude Bellingham",
+      "pais": "Inglaterra",
       "data_jogo": "11/07/2026",
       "hora_jogo": "18:00"
     },
