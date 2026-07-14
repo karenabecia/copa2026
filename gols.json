@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "14/07/2026 15:16",
-  "total_linhas": 317,
+  "ultima_atualizacao_brasilia": "14/07/2026 16:44",
+  "total_linhas": 318,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1903,6 +1903,12 @@
       "pais": "Argentina",
       "data_jogo": "11/07/2026",
       "hora_jogo": "22:00"
+    },
+    {
+      "nome_jogador": "Mikel Oyarzabal",
+      "pais": "Espanha",
+      "data_jogo": "14/07/2026",
+      "hora_jogo": "16:00"
     }
   ]
 }
