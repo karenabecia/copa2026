@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "14/07/2026 16:44",
-  "total_linhas": 318,
+  "ultima_atualizacao_brasilia": "14/07/2026 18:14",
+  "total_linhas": 319,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1906,6 +1906,12 @@
     },
     {
       "nome_jogador": "Mikel Oyarzabal",
+      "pais": "Espanha",
+      "data_jogo": "14/07/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Pedro Porro",
       "pais": "Espanha",
       "data_jogo": "14/07/2026",
       "hora_jogo": "16:00"
