@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "15/07/2026 16:35",
-  "total_linhas": 319,
+  "ultima_atualizacao_brasilia": "15/07/2026 18:14",
+  "total_linhas": 322,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1914,6 +1914,24 @@
       "nome_jogador": "Pedro Porro",
       "pais": "Espanha",
       "data_jogo": "14/07/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Anthony Gordon",
+      "pais": "Inglaterra",
+      "data_jogo": "15/07/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Enzo Fernández",
+      "pais": "Argentina",
+      "data_jogo": "15/07/2026",
+      "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Lautaro Martínez",
+      "pais": "Argentina",
+      "data_jogo": "15/07/2026",
       "hora_jogo": "16:00"
     }
   ]
