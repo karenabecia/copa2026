@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "18/07/2026 19:06",
-  "total_linhas": 326,
+  "ultima_atualizacao_brasilia": "18/07/2026 20:09",
+  "total_linhas": 332,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1954,6 +1954,42 @@
     },
     {
       "nome_jogador": "Bukayo Saka",
+      "pais": "Inglaterra",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Bradley Barcola",
+      "pais": "França",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Kylian Mbappé",
+      "pais": "França",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Bukayo Saka",
+      "pais": "Inglaterra",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Ousmane Dembélé",
+      "pais": "França",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
+    },
+    {
+      "nome_jogador": "Jude Bellingham",
       "pais": "Inglaterra",
       "data_jogo": "18/07/2026",
       "hora_jogo": "18:00"
