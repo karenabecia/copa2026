@@ -1,6 +1,6 @@
 {
-  "ultima_atualizacao_brasilia": "18/07/2026 16:30",
-  "total_linhas": 322,
+  "ultima_atualizacao_brasilia": "18/07/2026 18:05",
+  "total_linhas": 323,
   "dados": [
     {
       "nome_jogador": "Julián Quiñones",
@@ -1933,6 +1933,12 @@
       "pais": "Argentina",
       "data_jogo": "15/07/2026",
       "hora_jogo": "16:00"
+    },
+    {
+      "nome_jogador": "Declan Rice",
+      "pais": "Inglaterra",
+      "data_jogo": "18/07/2026",
+      "hora_jogo": "18:00"
     }
   ]
 }
